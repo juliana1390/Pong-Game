@@ -27,6 +27,7 @@ jmp main
 main:
 	
 	call draw_menu
+    call clear_screen
 
 halt
 ; ##################### PRINT ROUTINE #####################
@@ -38,62 +39,50 @@ print_routine:
     push r3
     push r4
 
-    loadn r3, #'\0'
+    loadn r4, #'\0'
 
-print_loop:    
-    loadi r4, r1
-    cmp r4, r3
-    jeq exit_print
-    add r4, r4, r2
-    outchar r4, r0
-    inc r0
-    inc r1
-    jmp print_loop
-    
-exit_print: 
-    pop r4
-    pop r3
-    pop r2      
-    pop r1      
-    pop r0      
-    rts
+    print_loop:    
+        loadi r2, r1
+        cmp r2, r4
+        jeq exit_print
+        add r2, r2, r3
+        outchar r2, r0
+        inc r0
+        inc r1
+        jmp print_loop
+        
+    exit_print: 
+        pop r4
+        pop r3
+        pop r2      
+        pop r1      
+        pop r0      
+        rts
 
-; ------------------------------------------
-PrintColorfullString:             
+; ##################### GET KEY #####################
+get_key:   
     push r0
-    push r1
-    push r2
-    push r3
-    push r5     ; color
+    push r1     
 
-    loadn r3, #'\0'
+    loadn r0, #255
     
-PrintColorfullStringLoop:
-    loadi r2, r1
-    cmp r2, r3
-    jeq ExitPrintColorfullString
-    add r2, r2, r5                  ; Adds color to the content
-    outchar r2, r0
-    inc r0
-    inc r1
-    jmp PrintColorfullStringLoop
-    
-ExitPrintColorfullString:
-    pop r5
-    pop r3
-    pop r2      
-    pop r1      
-    pop r0      
+    loop:          
+        inchar r1           ; Reads from keyboard (any key).
+        cmp r1, r0          ; Compares the key to r3.
+        jeq loop            ; range of keys
+        call clear_screen
+
+    pop r1
+    pop r0
     rts
+
 ; ##################### DRAW MENU #####################
 
 draw_menu:
 	push r0
 	push r1
 	push r2
-	;push r3
-	;push r4
-	push r5
+	push r3
 
 	menu01: string "                                        "
 	menu02: string "                                        "
@@ -130,134 +119,154 @@ draw_menu:
 	;loadn r1, #menu01
 	;loadn r2, #2560
 
+        ;menu_loop: 
+    ;   call print_routine  ;
+    ;   loadn r3, #40
+    ;   loadn r4, #41
+    ;   add r0, r0, r3
+    ;   add r1, r1, r4
+
+    ;   loadn r5, #1200
+    ;   cmp r0, r5
+    ;   jne menu_loop
+
 
 	loadn r0, #0
     loadn r2, #40
-    loadn r5, #2560		; lime color
+    loadn r3, #2560		; lime color
     
     loadn r1, #menu01
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2 
     loadn r1, #menu02
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu03
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu04
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu05
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu06
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu07
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu08
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu09
-    call PrintColorfullString
+    call print_routine
     
-    loadn r5, #2816		; yellow color
+    loadn r3, #2816		; yellow color
     add r0, r0, r2
     loadn r1, #menu10
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu11
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu12
-    call PrintColorfullString
+    call print_routine
 
-    loadn r5, #3328		; pink color
+    loadn r3, #3328		; pink color
     add r0, r0, r2
     loadn r1, #menu13
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu14
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu15
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu16
-    call PrintColorfullString    
+    call print_routine    
     add r0, r0, r2
     loadn r1, #menu17
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu18
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu19
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu20
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu21
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu22
-    call PrintColorfullString
+    call print_routine
 
-    loadn r5, #2560     ; lime color.
+    loadn r3, #2560     ; lime color.
     add r0, r0, r2
     loadn r1, #menu23
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu24
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
-    loadn r5, #2816     ; yellow color.
+    loadn r3, #2816     ; yellow color.
     loadn r1, #menu25
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
-    loadn r5, #3328     ; pink color.
+    loadn r3, #3328     ; pink color.
     loadn r1, #menu26
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
-    loadn r5, #2560     ; lime color.
+    loadn r3, #2560     ; lime color.
     loadn r1, #menu27
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
-    loadn r5, #2816     ; yellow color.
+    loadn r3, #2816     ; yellow color.
     loadn r1, #menu28
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu29
-    call PrintColorfullString
+    call print_routine
     add r0, r0, r2
     loadn r1, #menu30
-    call PrintColorfullString
+    call print_routine
 	
+    call get_key
 
-	;menu_loop:	
-	;	call print_routine	;
-	;	loadn r3, #40
-	;	loadn r4, #41
-	;	add r0, r0, r3
-	;	add r1, r1, r4
-
-	;	loadn r5, #1200
-	;	cmp r0, r5
-	;	jne menu_loop
-
-	
-	pop r5
-	;pop r4
-	;pop r3
+	pop r3
 	pop r2
 	pop r1
 	pop r0
 	rts
-; ##################### DRAW MENU #####################
 
 
+; ##################### CLEAR SCREEN #####################
+clear_screen:
+    push fr
+    push r0
+    push r1
+    push r2
 
+    loadn r0, #0
+    loadn r1, #1200
+    loadn r2, #' '
+
+    clear_screen_loop:
+        outchar r2, r0
+        inc r0
+        cmp r0, r1
+        jne clear_screen_loop
+
+    pop r2
+    pop r1
+    pop r0
+    pop fr
+    rts
+
+; ##################### CLEAR SCREEN #####################
 
 

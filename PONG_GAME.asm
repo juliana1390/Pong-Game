@@ -27,6 +27,7 @@ jmp main
 main:
 	
 	call draw_menu
+    call clear_screen
 
 halt
 ; ##################### PRINT ROUTINE #####################
@@ -37,6 +38,7 @@ print_routine:
     push r2
     push r3
     push r4
+    push r5
 
     loadn r3, #'\0'
 
@@ -50,7 +52,8 @@ print_loop:
     inc r1
     jmp print_loop
     
-exit_print: 
+exit_print:
+    pop r5
     pop r4
     pop r3
     pop r2      
@@ -255,7 +258,10 @@ draw_menu:
 	pop r1
 	pop r0
 	rts
-; ##################### DRAW MENU #####################
+
+; ##################### CLEAR SCREEN #####################
+clear_screen:
+
 
 
 
