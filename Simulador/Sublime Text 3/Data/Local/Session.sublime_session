@@ -221,8 +221,40 @@
 						"print_routine	abc"
 					],
 					[
-						"dr",
+						"Single",
+						"singlePlayer"
+					],
+					[
+						"multi",
+						"multi_player	abc"
+					],
+					[
+						"clear",
+						"clear_screen	abc"
+					],
+					[
+						"dra",
 						"draw_menu	abc"
+					],
+					[
+						"dr",
+						"draw_game_over	abc"
+					],
+					[
+						"draw",
+						"draw_game_over	abc"
+					],
+					[
+						"drwa",
+						"draw_game_over	abc"
+					],
+					[
+						"game",
+						"draw_game_over"
+					],
+					[
+						"ga",
+						"draw_game_over"
 					],
 					[
 						"TryList",
@@ -269,12 +301,11 @@
 			"buffers":
 			[
 				{
-					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/PONG_GAME.asm",
+					"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
 					"settings":
 					{
-						"buffer_size": 6504,
-						"line_ending": "Windows",
-						"name": "; PONG GAME"
+						"buffer_size": 15434,
+						"line_ending": "Windows"
 					}
 				}
 			],
@@ -310,6 +341,9 @@
 			},
 			"file_history":
 			[
+				"/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
+				"/C/Users/julia/Pong-Game/PONG_GAME.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/PONG_GAME.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/snake.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pacman.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste.asm",
@@ -360,7 +394,7 @@
 			],
 			"find":
 			{
-				"height": 36.0
+				"height": 39.0
 			},
 			"find_in_files":
 			{
@@ -374,6 +408,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"clear_screen",
 					"piscaPressStart",
 					"start",
 					"menu",
@@ -500,8 +535,7 @@
 					"compares",
 					"call",
 					"write",
-					"push",
-					"Compare"
+					"push"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -524,25 +558,27 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/PONG_GAME.asm",
+							"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 6504,
+								"buffer_size": 15434,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										843,
-										843
+										4768,
+										4768
 									]
 								],
 								"settings":
 								{
-									"auto_name": "; PONG GAME",
-									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage"
+									"spell_check": true,
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -556,7 +592,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 28.0
+				"height": 31.0
 			},
 			"input":
 			{
@@ -597,7 +633,7 @@
 			"project": "",
 			"replace":
 			{
-				"height": 52.0
+				"height": 58.0
 			},
 			"save_all_on_build": true,
 			"select_file":

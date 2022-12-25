@@ -1,2 +1,2 @@
 # Pong-Game
-Game made in "Assembly ICMC" - Graduation Subject: Computer Organization and Architecture
+Game made in "ICMC Assembly" - Graduation Subject: Computer Organization and Architecture
