@@ -51,12 +51,27 @@ credm06: string "               Professor:               "
 credm07: string "        EDUARDO DO VALLE SIMOES         "
 
 key: var #1     ; pressed key
+
+pad1: var #6                ; size of paddle 1
+static pad1 + #0, #521      ; position of character 1 from paddle 1
+static pad1 + #1, #561      ; position of character 2 from paddle 1   
+static pad1 + #2, #601      ; position of character 3 from paddle 1  
+static pad1 + #3, #641      ; position of character 4 from paddle 1  
+static pad1 + #4, #681      ; position of character 5 from paddle 1 
+static pad1 + #5, #721      ; position of character 6 from paddle 1 
+
+pad2: var #6                ; size of paddle 2
+static pad2 + #0, #558      ; position of character 1 from paddle 2 
+static pad2 + #1, #598      ; position of character 2 from paddle 2 
+static pad2 + #2, #638      ; position of character 3 from paddle 2 
+static pad2 + #3, #678      ; position of character 4 from paddle 2 
+static pad2 + #4, #718      ; position of character 5 from paddle 2 
+static pad2 + #5, #758      ; position of character 6 from paddle 2 
     
 main:
-	
+
 	call draw_menu
-    call clear_screen
-             
+    call clear_screen       
     call print_menu_messages
 
     menu_loop:  
@@ -65,7 +80,7 @@ main:
         load r1, key
         cmp r0, r1          
         jeq single_player         ; singlePlayer    
-        
+
         loadn r0, #'m'
         cmp r0, r1              
         jeq multi_player          ; multiPlayer 
@@ -78,49 +93,49 @@ main:
         cmp r0, r1
         jne menu_loop
     
-
 halt
 
 ; ##################### MENU MESSAGES #####################
     ; PRINT MAIN MENU MESSAGES:
     ; r0 = Position on the screen where the 1st character of the message will be printed.
-    ; r1 = Adress where the message begin.
-    ; Obs: The message will be printed untill find "/0".
+    ; r1 = Address where the message begin.
+    ; Obs: The message will be printed until find "/0".
 
 print_menu_messages:
-    push r0
-    push r1
-    push r3
+    push r0     ; keeps r0 onto the stack to be used by the routine (screen position)
+    push r1     ; keeps r1 onto the stack to be used by the routine (message content)
+    push r3     ; keeps r3 onto the stack to be used by the routine (color)
 
-    loadn r0, #120
-    loadn r1, #message00
-    loadn r3, #2560
-    call print_routine
-    loadn r0, #320
+    loadn r0, #120          ; loads the position 120 from screen
+    loadn r1, #message00    ; loads the message 1 content
+    loadn r3, #2560         ; loads the color
+    call print_routine      ; print
+
+    loadn r0, #320          ; message 2   
     loadn r1, #message01
     loadn r3, #2816
     call print_routine
-    loadn r0, #560
+    loadn r0, #560          ; message 3
     loadn r1, #message02
     loadn r3, #3328
     call print_routine
-    loadn r0, #680
+    loadn r0, #680          ; message 4
     loadn r1, #message03
     loadn r3, #3328
     call print_routine
-    loadn r0, #1040
+    loadn r0, #1040         ; message 5
     loadn r1, #message04
     loadn r3, #2560
     call print_routine
-    loadn r0, #1160
+    loadn r0, #1160         ; message 6
     loadn r1, #message05
     loadn r3, #2560
     call print_routine
 
-    pop r0
-    pop r1
-    pop r3
-    rts
+    pop r2     ; resets register
+    pop r1     ; resets register
+    pop r3     ; resets register
+    rts        ; returns to game flow
 
 ; ##################### CREDITS #####################
 print_credits:
@@ -129,35 +144,35 @@ print_credits:
     push r3
 
     call clear_screen
-    loadn r0, #120          ; credits pos
-    loadn r1, #credm00
-    loadn r3, #2560
+    loadn r0, #120          ; message 1: position
+    loadn r1, #credm00      ; message 1: content
+    loadn r3, #2560         ; message 1: color
     call print_routine
-    loadn r0, #200          ; dev pos
-    loadn r1, #credm01
-    loadn r3, #2816
+    loadn r0, #200          ; message 2
+    loadn r1, #credm01      ; ...
+    loadn r3, #2816         ; ...
     call print_routine
-    loadn r0, #280          ; dev name pos
-    loadn r1, #credm02
+    loadn r0, #280          ; message 3
+    loadn r1, #credm02      ; ...
     loadn r3, #3328
     call print_routine
-    loadn r0, #360          ; dev name pos
+    loadn r0, #360          ; message 4
     loadn r1, #credm03
     loadn r3, #3328
     call print_routine
-    loadn r0, #640          ; sub pos
+    loadn r0, #640          ; message 5
     loadn r1, #credm04
     loadn r3, #2816
     call print_routine
-    loadn r0, #720          ; sub name pos
+    loadn r0, #720          ; message 6
     loadn r1, #credm05
     loadn r3, #3328
     call print_routine
-    loadn r0, #1000          ; prof pos
+    loadn r0, #1000         ; message 7
     loadn r1, #credm06
     loadn r3, #2816
     call print_routine
-    loadn r0, #1080          ; prof name pos
+    loadn r0, #1080         ; message 8
     loadn r1, #credm07
     loadn r3, #3328
     call print_routine
@@ -171,23 +186,23 @@ print_credits:
 
 ; ##################### PRINT ROUTINE #####################
 print_routine:			   
-    push r0
-    push r1
-    push r2
-    push r3
-    push r4
+    push r0     ; position
+    push r1     ; message
+    push r2     ; for subroutine use
+    push r3     ; color
+    push r4     ; stopping criterion
 
     loadn r4, #'\0'
 
     print_loop:    
-        loadi r2, r1
-        cmp r2, r4
-        jeq exit_print
-        add r2, r2, r3
-        outchar r2, r0
-        inc r0
-        inc r1
-        jmp print_loop
+        loadi r2, r1        ; loads the the 1st character of the message into r2
+        cmp r2, r4          ; compares character from message to stopping criterion
+        jeq exit_print      ; is so: exit
+        add r2, r2, r3      ; if not: adds color to character
+        outchar r2, r0      ; prints character
+        inc r0              ; increments the position
+        inc r1              ; increments the character
+        jmp print_loop      ; jumps to print_loop, beginning of subroutine
         
     exit_print: 
         pop r4
@@ -205,9 +220,9 @@ get_key:
     loadn r0, #255
     
     get_key_loop:          
-        inchar r1           ; Reads from keyboard (any key).
-        cmp r1, r0          ; Compares the key to r3.
-        jeq get_key_loop            ; range of keys
+        inchar r1           ; reads any key from the keyboard
+        cmp r1, r0          ; compares the key to r0, out of range for valid keys
+        jeq get_key_loop    ; if so, starts the loop again
 
         store key, r1
 
@@ -222,15 +237,15 @@ clear_screen:
     push r1
     push r2
 
-    loadn r0, #0
-    loadn r1, #1200
-    loadn r2, #' '
+    loadn r0, #0        ; initial position
+    loadn r1, #1200     ; final position
+    loadn r2, #' '      ; 'empty' space to print
 
     clear_screen_loop:
-        outchar r2, r0
-        inc r0
-        cmp r0, r1
-        jne clear_screen_loop
+        outchar r2, r0          ; prints in 1st position
+        inc r0                  ; increments the position
+        cmp r0, r1              ; compares the incremented position to final position
+        jne clear_screen_loop   ; if it's not equal, starts loop again, till it reaches the end of screen
 
     pop r2
     pop r1
@@ -240,22 +255,114 @@ clear_screen:
 
 ; ##################### SINGLE PLAYER #####################
 single_player:
-    push r0
-    push r1
-    push r3
 
     call clear_screen
-    m00: string "Single Player Game"
-    loadn r0, #600
-    loadn r1, #m00
-    loadn r3, #2560
-    call print_routine
+    call draw_pad 
+
+    rts
+
+; ##################### DRAW PADDLES #####################
+draw_pad:
+    push r0     ; keeps the address from paddle 1
+    push r1     ; keeps the character 1 from paddle 1
+    push r2     ; keeps the character 2 from paddle 1
+    push r3     ; keeps the character 3 from paddle 1
+    push r4     ; keeps the character 4 from paddle 1
+    push r5     ; keeps the character 5 from paddle 1
+    push r6     ; keeps the character 6 from paddle 1
+    push r7     ; keeps the place where to print
+
+; ---------------- PAD 1 ------------------
+    loadn r0, #pad1  ; loads the address from paddle 1
+    loadn r1, #253   ; character 1 from paddle 1
+    loadn r2, #253   ; character 2 from paddle 1
+    loadn r3, #253   ; character 3 from paddle 1
+    loadn r4, #253   ; character 4 from paddle 1
+    loadn r5, #253   ; character 5 from paddle 1
+    loadn r6, #253   ; character 6 from paddle 1
+
+draw_pad1_loop:
+    loadi r7, r0        ; loads the upside from paddle 1
+    outchar r1, r7      ; prints it on screen
+    nop
+    nop
+    inc r0              ; goes to the next address
+    loadi r7, r0        ; loads the downside (2nd character from paddle 1)
+    outchar r2, r7      ; prints it on screen
+    nop
+    nop
+    inc r0              ; character 3 from paddle 1
+    loadi r7, r0
+    outchar r3, r7
+    nop
+    nop
+    inc r0              ; character 4 from paddle 1
+    loadi r7, r0
+    outchar r4, r7
+    nop
+    nop
+    inc r0              ; character 5 from paddle 1
+    loadi r7, r0
+    outchar r5, r7
+    nop
+    nop
+    inc r0              ; character 6 from paddle 1
+    loadi r7, r0
+    outchar r6, r7
+    nop
+    nop
+
+; ---------------- PAD 2 ------------------
+    loadn r0, #pad2  ; loads the address from paddle 2
+    loadn r1, #253   ; character 1 from paddle 2
+    loadn r2, #253   ; character 1 from paddle 2
+    loadn r3, #253   ; character 1 from paddle 2
+    loadn r4, #253   ; character 1 from paddle 2
+    loadn r5, #253   ; character 1 from paddle 2
+    loadn r6, #253   ; character 1 from paddle 2
+
+draw_pad2_loop:
+    loadi r7, r0        ; loads the upside from paddle 2
+    outchar r1, r7      ; prints it on screen
+    nop
+    nop
+    inc r0              ; goes to the next address
+    loadi r7, r0        ; loads the downside (2nd character from paddle 2)
+    outchar r2, r7      ; prints it on screen
+    nop
+    nop
+    inc r0              ; character 3 from paddle 2
+    loadi r7, r0
+    outchar r3, r7
+    nop
+    nop
+    inc r0              ; character 4 from paddle 2
+    loadi r7, r0
+    outchar r4, r7
+    nop
+    nop
+    inc r0              ; character 5 from paddle 2
+    loadi r7, r0
+    outchar r5, r7
+    nop
+    nop
+    inc r0              ; character 6 from paddle 2
+    loadi r7, r0
+    outchar r6, r7
+    nop
+    nop
+
     call get_key
 
+draw_pad_exit:
+    pop r7
+    pop r6
+    pop r5
+    pop r4
     pop r3
-    pop r2
     pop r1
-    rts
+    pop r0
+    rts     
 
 ; ##################### MULTI PLAYER #####################
 multi_player:
@@ -330,13 +437,13 @@ draw_menu:
     ;   jne menu_loop
 
 
-    loadn r0, #0
-    loadn r2, #40
+    loadn r0, #0        ; loads 1st position of the line
+    loadn r2, #40       ; loads last position of the line
     loadn r3, #2560     ; lime color
     
-    loadn r1, #menu01
-    call print_routine
-    add r0, r0, r2 
+    loadn r1, #menu01   ; loads the line menu01 into r1
+    call print_routine  ; prints
+    add r0, r0, r2      ; goes to next line
     loadn r1, #menu02
     call print_routine
     add r0, r0, r2
