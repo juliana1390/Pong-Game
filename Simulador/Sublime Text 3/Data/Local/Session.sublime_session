@@ -217,8 +217,36 @@
 				"selected_items":
 				[
 					[
+						"menu",
+						"menu_loop	abc"
+					],
+					[
+						"get",
+						"get_char	abc"
+					],
+					[
 						"print",
-						"print_routine	abc"
+						"print_screen2	abc"
+					],
+					[
+						"start",
+						"startScrline1	abc"
+					],
+					[
+						"dr",
+						"draw_pad2	abc"
+					],
+					[
+						"pad",
+						"draw_pad"
+					],
+					[
+						"dra",
+						"draw_pad2	abc"
+					],
+					[
+						"si",
+						"single_player	abc"
 					],
 					[
 						"Single",
@@ -231,14 +259,6 @@
 					[
 						"clear",
 						"clear_screen	abc"
-					],
-					[
-						"dra",
-						"draw_menu	abc"
-					],
-					[
-						"dr",
-						"draw_game_over	abc"
 					],
 					[
 						"draw",
@@ -304,7 +324,7 @@
 					"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
 					"settings":
 					{
-						"buffer_size": 15434,
+						"buffer_size": 27993,
 						"line_ending": "Windows"
 					}
 				}
@@ -342,11 +362,12 @@
 			"file_history":
 			[
 				"/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste2.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste.asm",
 				"/C/Users/julia/Pong-Game/PONG_GAME.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/PONG_GAME.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/snake.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pacman.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hangman.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/printCharmap.asm",
 				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/printaASCII.asm",
@@ -394,7 +415,7 @@
 			],
 			"find":
 			{
-				"height": 39.0
+				"height": 40.0
 			},
 			"find_in_files":
 			{
@@ -408,6 +429,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"get_char",
 					"clear_screen",
 					"piscaPressStart",
 					"start",
@@ -534,8 +556,7 @@
 					"\\0",
 					"compares",
 					"call",
-					"write",
-					"push"
+					"write"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -562,26 +583,25 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 15434,
+								"buffer_size": 27993,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										4768,
-										4768
+										22301,
+										22301
 									]
 								],
 								"settings":
 								{
-									"spell_check": true,
 									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
 									"tab_size": 4,
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 2577.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -629,7 +649,7 @@
 			{
 				"height": 0.0
 			},
-			"position": "0,2,3,-32000,-32000,-1,-1,627,-12,4,706",
+			"position": "0,2,3,-1,-1,-1,-1,652,609,29,1327",
 			"project": "",
 			"replace":
 			{
