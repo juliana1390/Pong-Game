@@ -56,21 +56,21 @@ jmp main
 ; VARIABLES -------------------------------------------------------
     char: var #1     ; input from keyboard
 
-    pad1: var #6                ; paddle 1
-    static pad1 + #0, #521      ; position of character 1 from paddle 1
-    static pad1 + #1, #561      ; position of character 2 from paddle 1   
-    static pad1 + #2, #601      ; position of character 3 from paddle 1  
-    static pad1 + #3, #641      ; position of character 4 from paddle 1  
-    static pad1 + #4, #681      ; position of character 5 from paddle 1 
-    static pad1 + #5, #721      ; position of character 6 from paddle 1 
+    player_pad: var #4                ; paddle 1
+    ;static player_pad + #0, #521      ; position of character 1 from paddle 1
+    ;static player_pad + #1, #561      ; position of character 2 from paddle 1   
+    ;static player_pad + #2, #601      ; position of character 3 from paddle 1  
+    ;static player_pad + #3, #641      ; position of character 4 from paddle 1  
+    ;static player_pad + #4, #681      ; position of character 5 from paddle 1 
+    ;static player_pad + #5, #721      ; position of character 6 from paddle 1 
 
-    pad2: var #6                ; paddle 2
-    static pad2 + #0, #558      ; position of character 1 from paddle 2 
-    static pad2 + #1, #598      ; position of character 2 from paddle 2 
-    static pad2 + #2, #638      ; position of character 3 from paddle 2 
-    static pad2 + #3, #678      ; position of character 4 from paddle 2 
-    static pad2 + #4, #718      ; position of character 5 from paddle 2 
-    static pad2 + #5, #758      ; position of character 6 from paddle 2 
+    AI_pad: var #4                ; paddle 2
+    ;static AI_pad + #0, #558      ; position of character 1 from paddle 2 
+    ;static AI_pad + #1, #598      ; position of character 2 from paddle 2 
+    ;static AI_pad + #2, #638      ; position of character 3 from paddle 2 
+    ;static AI_pad + #3, #678      ; position of character 4 from paddle 2 
+    ;static AI_pad + #4, #718      ; position of character 5 from paddle 2 
+    ;static AI_pad + #5, #758      ; position of character 6 from paddle 2 
     
 
 ; ===============================================================
@@ -108,16 +108,8 @@ halt
 ; FUNCTIONS =====================================================
 ; ===============================================================
 
-; SINGLE PLAYER (VS MACHINE) -------------------------------------------------------
+; SINGLE PLAYER (VS MACHINE) ------------------------------------
 single_player:
-
-    call clear_screen
-    call draw_pad 
-
-    rts
-
-; DRAW PADDLES ---------------------------------------------------------------------
-draw_pad:
     push r0     ; keeps the address from paddle 1
     push r1     ; keeps the character 1 from paddle 1
     push r2     ; keeps the character 2 from paddle 1
@@ -127,76 +119,14 @@ draw_pad:
     push r6     ; keeps the character 6 from paddle 1
     push r7     ; keeps the place where to print
 
-; ---------------- PAD 1 ------------------
-    loadn r0, #pad1  ; loads the address from paddle 1
-    loadn r1, #253   ; character 1 from paddle 1
-    loadn r2, #253   ; character 2 from paddle 1
-    loadn r3, #253   ; character 3 from paddle 1
-    loadn r4, #253   ; character 4 from paddle 1
-    loadn r5, #253   ; character 5 from paddle 1
-    loadn r6, #253   ; character 6 from paddle 1
+    call clear_screen
+    call draw_player_pad
+    call draw_AI_pad
 
-draw_pad1_loop:
-    loadi r7, r0        ; loads the upside from paddle 1
-    outchar r1, r7      ; prints it on screen
-    
-    inc r0              ; goes to the next address
-    loadi r7, r0        ; loads the downside (2nd character from paddle 1)
-    outchar r2, r7      ; prints it on screen
-    
-    inc r0              ; character 3 from paddle 1
-    loadi r7, r0
-    outchar r3, r7
-    
-    inc r0              ; character 4 from paddle 1
-    loadi r7, r0
-    outchar r4, r7
-    
-    inc r0              ; character 5 from paddle 1
-    loadi r7, r0
-    outchar r5, r7
-    
-    inc r0              ; character 6 from paddle 1
-    loadi r7, r0
-    outchar r6, r7
-    
+    call get_char
+    call clear_player_pad
+    call clear_AI_pad
 
-; ---------------- PAD 2 ------------------
-    loadn r0, #pad2  ; loads the address from paddle 2
-    loadn r1, #253   ; character 1 from paddle 2
-    loadn r2, #253   ; character 1 from paddle 2
-    loadn r3, #253   ; character 1 from paddle 2
-    loadn r4, #253   ; character 1 from paddle 2
-    loadn r5, #253   ; character 1 from paddle 2
-    loadn r6, #253   ; character 1 from paddle 2
-
-draw_pad2_loop:
-    loadi r7, r0        ; loads the upside from paddle 2
-    outchar r1, r7      ; prints it on screen
-    
-    inc r0              ; goes to the next address
-    loadi r7, r0        ; loads the downside (2nd character from paddle 2)
-    outchar r2, r7      ; prints it on screen
-   
-    inc r0              ; character 3 from paddle 2
-    loadi r7, r0
-    outchar r3, r7
-   
-    inc r0              ; character 4 from paddle 2
-    loadi r7, r0
-    outchar r4, r7
-    
-    inc r0              ; character 5 from paddle 2
-    loadi r7, r0
-    outchar r5, r7
-    
-    inc r0              ; character 6 from paddle 2
-    loadi r7, r0
-    outchar r6, r7
-
-    ;call get_key
-
-draw_pad_exit:
     pop r7
     pop r6
     pop r5
@@ -204,9 +134,166 @@ draw_pad_exit:
     pop r3
     pop r1
     pop r0
-    rts     
+    halt 
 
-; MULTI PLAYER ---------------------------------------------------------------------
+    
+
+; DRAW PLAYER PAD -----------------------------------------------
+draw_player_pad:
+    push r0     ; keeps the address from paddle
+    push r1     ; keeps the position where to print
+    push r2     ; keeps the char
+    push r3     ; keeps color
+
+    load r0, player_pad ; loads the adress of paddle
+    loadn r3, #3328     ; loads the color of paddle
+
+    loadn r1, #521      ; position of char 1 ------------- 1
+    add r1, r1, r0      ; relates char to paddle
+
+    loadn r1, #253      ; char
+    add r2, r2, r3      ; adds color to char
+    outchar r2, r1      ; prints
+
+    loadn r1, #561      ; position of char 2 ------------- 2
+    loadn r2, #253      ; char 2
+    add r2, r2, r3
+    outchar r2, r1
+
+    loadn r1, #601      ; position of char 3 ------------- 3
+    loadn r2, #253      ; char 3
+    add r2, r2, r3
+    outchar r2, r1
+   
+    loadn r1, #641      ; position of char 4 ------------- 4
+    loadn r2, #253      ; char 4
+    add r2, r2, r3
+    outchar r2, r1
+
+    loadn r1, #681      ; position of char 5 ------------- 5
+    loadn r2, #253      ; char 5
+    add r2, r2, r3
+    outchar r2, r1
+
+    pop r3
+    pop r2
+    pop r1
+    pop r0
+    rts
+
+; DRAW AI PAD ---------------------------------------------------
+draw_AI_pad:
+    push r0     ; keeps the address from paddle
+    push r1     ; keeps the position where to print
+    push r2     ; keeps the char
+    push r3     ; keeps color
+
+    load r0, AI_pad     ; loads the adress of paddle
+    loadn r3, #3072     ; loads the color of paddle
+
+    loadn r1, #558      ; position of char 1 ------------- 1
+    add r1, r1, r0      ; relates char to paddle
+
+    loadn r1, #253      ; char
+    add r2, r2, r3      ; adds color to char
+    outchar r2, r1      ; prints
+
+    loadn r1, #598      ; position of char 2 ------------- 2
+    loadn r2, #253      ; char 2
+    add r2, r2, r3
+    outchar r2, r1
+
+    loadn r1, #638      ; position of char 3 ------------- 3
+    loadn r2, #253      ; char 3
+    add r2, r2, r3
+    outchar r2, r1
+   
+    loadn r1, #678      ; position of char 4 ------------- 4
+    loadn r2, #253      ; char 4
+    add r2, r2, r3
+    outchar r2, r1
+
+    loadn r1, #718      ; position of char 5 ------------- 5
+    loadn r2, #253      ; char 5
+    add r2, r2, r3
+    outchar r2, r1
+
+    pop r3
+    pop r2
+    pop r1
+    pop r0
+    rts    
+
+; CLEAR PLAYER PAD ----------------------------------------------
+clear_player_pad:
+    push r0
+    push r1
+    push r2
+    push r3
+    
+    load r0, player_pad ; loads the adress of paddle
+    loadn r3, #40       ; increments one whole line
+
+    loadn r1, #521      ; position of char 1
+    add r1, r1, r0
+    add r1, r1, r3      ; next line
+    
+    loadn r2, #' '
+    outchar r2, r1      ; clear char 1
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 2
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 3
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 4
+    add r1, r1, r3
+
+    outchar r2, r1      ; clear char 5
+    add r1, r1, r3  
+    
+    pop r3
+    pop r2
+    pop r1
+    pop r0
+    rts
+; DRAW AI PAD ---------------------------------------------------
+clear_AI_pad:
+    push r0
+    push r1
+    push r2
+
+    load r0, AI_pad     ; loads the adress of paddle
+    loadn r3, #40       ; increments one whole line
+
+    loadn r1, #558      ; position of char 1
+    add r1, r1, r0
+    add r1, r1, r3      ; next line
+    
+    loadn r2, #' '
+    outchar r2, r1      ; clear char 1
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 2
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 3
+    add r1, r1, r3
+    
+    outchar r2, r1      ; clear char 4
+    add r1, r1, r3
+
+    outchar r2, r1      ; clear char 5
+    add r1, r1, r3  
+
+    pop r2
+    pop r1
+    pop r0
+    rts
+
+; MULTI PLAYER --------------------------------------------------
 multi_player:
     push r0
     push r1
@@ -226,7 +313,7 @@ multi_player:
     rts
 
 
-; CLEAR SCREEN ---------------------------------------------------------------------
+; CLEAR SCREEN --------------------------------------------------
 clear_screen:
 ; clear the screen from the last position(1200) to the first one(0)
   push r0
@@ -245,7 +332,7 @@ clear_screen:
   pop r0
   rts
 
-; GET CHAR -------------------------------------------------------------------------
+; GET CHAR ------------------------------------------------------
 get_char:   
   ; routine to get input from keyboard
   push r0

@@ -217,6 +217,22 @@
 				"selected_items":
 				[
 					[
+						"clear",
+						"clear_AI_pad	abc"
+					],
+					[
+						"clear_",
+						"clear_player_pad	abc"
+					],
+					[
+						"pla",
+						"player_pad	abc"
+					],
+					[
+						"dra",
+						"draw_pad	abc"
+					],
+					[
 						"menu",
 						"menu_loop	abc"
 					],
@@ -241,10 +257,6 @@
 						"draw_pad"
 					],
 					[
-						"dra",
-						"draw_pad2	abc"
-					],
-					[
 						"si",
 						"single_player	abc"
 					],
@@ -255,10 +267,6 @@
 					[
 						"multi",
 						"multi_player	abc"
-					],
-					[
-						"clear",
-						"clear_screen	abc"
 					],
 					[
 						"draw",
@@ -324,7 +332,15 @@
 					"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
 					"settings":
 					{
-						"buffer_size": 28104,
+						"buffer_size": 29568,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hamster.asm",
+					"settings":
+					{
+						"buffer_size": 23349,
 						"line_ending": "Windows"
 					}
 				}
@@ -429,6 +445,8 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"player_pad",
+					"desenhaPersonagens",
 					"get_char",
 					"clear_screen",
 					"piscaPressStart",
@@ -554,9 +572,7 @@
 					"fr",
 					"storei",
 					"\\0",
-					"compares",
-					"call",
-					"write"
+					"compares"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -583,15 +599,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 28104,
+								"buffer_size": 29568,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										5675,
-										5675
+										8589,
+										8589
 									]
 								],
 								"settings":
@@ -601,10 +617,39 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 1440.0,
+								"translation.y": 6185.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hamster.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 23349,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										13286,
+										13286
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 14341.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
 							"type": "text"
 						}
 					]
