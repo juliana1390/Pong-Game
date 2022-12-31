@@ -54,43 +54,31 @@ jmp main
 
 
 ; VARIABLES -------------------------------------------------------
-    char: var #1     ; input from keyboard
-
-    player_pad: var #4                ; paddle 1
-    ;static player_pad + #0, #521      ; position of character 1 from paddle 1
-    ;static player_pad + #1, #561      ; position of character 2 from paddle 1   
-    ;static player_pad + #2, #601      ; position of character 3 from paddle 1  
-    ;static player_pad + #3, #641      ; position of character 4 from paddle 1  
-    ;static player_pad + #4, #681      ; position of character 5 from paddle 1 
-    ;static player_pad + #5, #721      ; position of character 6 from paddle 1 
-
-    AI_pad: var #4                ; paddle 2
-    ;static AI_pad + #0, #558      ; position of character 1 from paddle 2 
-    ;static AI_pad + #1, #598      ; position of character 2 from paddle 2 
-    ;static AI_pad + #2, #638      ; position of character 3 from paddle 2 
-    ;static AI_pad + #3, #678      ; position of character 4 from paddle 2 
-    ;static AI_pad + #4, #718      ; position of character 5 from paddle 2 
-    ;static AI_pad + #5, #758      ; position of character 6 from paddle 2 
+    char: var #1            ; input from keyboard, size: 1 char
+    player_pad: var #4      ; player paddle label, size: 4 char
+    AI_pad: var #4          ; AI paddle label, size: 4 char
+    player_pad_speed: var #1
     
-
 ; ===============================================================
 ; MAIN ==========================================================
 ; ===============================================================    
 main:
     
-    call print_start_screens  
+    call clear_screen
+    call print_start_screens
     call get_char
+    call clear_screen
     call print_menu_messages
-
-    menu_loop:  
+    
+    menu_loop:
         call get_char
         loadn r0, #'s'
         load r1, char
-        cmp r0, r1          
+        cmp r0, r1
         jeq single_player         ; singlePlayer    
 
         loadn r0, #'m'
-        cmp r0, r1              
+        cmp r0, r1
         jeq multi_player          ; multiPlayer 
         
         loadn r0, #'c'
@@ -101,42 +89,91 @@ main:
         cmp r0, r1
         jmp menu_loop
 
-   
-halt
+    single_player:
+        call clear_screen
+        call move_player_pad
+        ;jmp single_player
 
+    ;call delay
+   
+
+halt
 ; ===============================================================
 ; FUNCTIONS =====================================================
-; ===============================================================
+; ===============================================================   
 
-; SINGLE PLAYER (VS MACHINE) ------------------------------------
-single_player:
-    push r0     ; keeps the address from paddle 1
-    push r1     ; keeps the character 1 from paddle 1
-    push r2     ; keeps the character 2 from paddle 1
-    push r3     ; keeps the character 3 from paddle 1
-    push r4     ; keeps the character 4 from paddle 1
-    push r5     ; keeps the character 5 from paddle 1
-    push r6     ; keeps the character 6 from paddle 1
-    push r7     ; keeps the place where to print
+; MOVE PLAYER PAD -----------------------------------------------
+move_player_pad:
+    push r0
+    push r1
+    push r2
 
-    call clear_screen
-    call draw_player_pad
-    call draw_AI_pad
+    load r0, char   ; loads char address
 
-    call get_char
-    call clear_player_pad
-    call clear_AI_pad
+    inchar r1       ; keyboard input
+    loadn r2, #'w'  ; loads w into r2
+    cmp r1, r2      ; compares input to w
+    jeq move_up     ; if (input == w), jumps to move_up
 
-    pop r7
-    pop r6
-    pop r5
-    pop r4
-    pop r3
+    loadn r2, #'s'  ; loads s to r2
+    cmp r1, r2      ; compares input to s
+    jeq move_down   ; if (input == s), jumps to move_down
+    
+    pop r2
     pop r1
     pop r0
-    halt 
+    rts
 
-    
+; DELAY ---------------------------------------------------------
+delay:
+
+; MOVE UP -------------------------------------------------------
+move_up:
+    push r0
+    push r1
+    push r2
+
+    load r0, player_pad     ;
+    loadn r1, #1            ; max position up
+    loadn r2, #40           ; increments/decrements a whole line
+
+    cmp r0, r1              ; compares the position of paddle to max position
+    jeq move_up_end         ; if they are equal ends the movement
+
+    sub r0, r0, r2          ; decrements one line
+    call clear_player_pad   ; clears the pad
+    store player_pad, r0    ; stores the decremented char
+    call draw_player_pad    ; prints
+
+    move_up_end:
+        pop r2
+        pop r1
+        pop r0
+        rts
+
+; MOVE DOWN -----------------------------------------------------
+move_down:
+    push r0
+    push r1
+    push r2
+
+    load r0, player_pad     ;
+    loadn r1, #1001         ; max position down
+    loadn r2, #40           ; increments/decrements a whole line
+
+    cmp r0, r1              ; compares the position of paddle to max position
+    jeq move_down_end         ; if they are equal ends the movement
+
+    add r0, r0, r2          ; increments one line
+    call clear_player_pad   ; clears the pad
+    store player_pad, r0    ; stores the decremented char
+    call draw_player_pad    ; prints
+
+    move_down_end:
+        pop r2
+        pop r1
+        pop r0
+        rts
 
 ; DRAW PLAYER PAD -----------------------------------------------
 draw_player_pad:
@@ -535,7 +572,6 @@ draw_game_over:
         push r1
         push r2
         
-        call clear_screen
         loadn r1, #startScrline0    ; first char of first line address from start screen 1
         loadn r2, #3072             ; yellow color
         call print_screen2          ; prints full start screen 1
@@ -562,7 +598,6 @@ draw_game_over:
         push r1     ; keeps r1 onto the stack to be used by the routine (message content)
         push r3     ; keeps r3 onto the stack to be used by the routine (color)
 
-        call clear_screen
         loadn r0, #80          ; loads the position 120 from screen
         loadn r1, #message00    ; loads the message 0 content
         loadn r3, #2560         ; loads the color
@@ -597,8 +632,6 @@ draw_game_over:
         loadn r1, #message06
         loadn r3, #2560
         call print_routine
-
-
 
 
         pop r2
