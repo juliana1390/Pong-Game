@@ -15,6 +15,42 @@
 			{
 				"selected_items":
 				[
+					[
+						"clear",
+						"clear_screen"
+					],
+					[
+						"scene1",
+						"scene1Scrline0"
+					],
+					[
+						"scene",
+						"sceneScrline0"
+					],
+					[
+						"x",
+						"x_pos_player_pad"
+					],
+					[
+						"sobre",
+						"imprime_tela_sobre"
+					],
+					[
+						"move_",
+						"move_player_pad"
+					],
+					[
+						"velocida",
+						"velocidadeDelay"
+					],
+					[
+						"digL",
+						"digLetra_Loop"
+					],
+					[
+						"inc",
+						"incloop"
+					]
 				]
 			},
 			"buffers":
@@ -23,25 +59,47 @@
 					"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
 					"settings":
 					{
-						"buffer_size": 29989,
+						"buffer_size": 39216,
 						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong_test.asm",
+					"settings":
+					{
+						"buffer_size": 30889,
+						"line_ending": "Windows",
+						"name": "pong_test"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong.asm",
+					"settings":
+					{
+						"buffer_size": 49514,
+						"line_ending": "Unix"
 					}
 				}
 			],
-			"build_system": "",
+			"build_system": "Packages/Assembly ICMC/Assembly ICMC.sublime-build",
 			"command_palette":
 			{
-				"height": 0.0,
+				"height": 81.0,
 				"selected_items":
 				[
+					[
+						"insta",
+						"Package Control: Install Package"
+					]
 				],
-				"width": 0.0
+				"width": 400.0
 			},
 			"console":
 			{
-				"height": 0.0,
+				"height": 126.0,
 				"history":
 				[
+					"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 				]
 			},
 			"distraction_free":
@@ -55,10 +113,36 @@
 			},
 			"file_history":
 			[
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/arrow.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hamster.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Icenic.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/naveSimoes.asm",
+				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/orgame.asm",
+				"/D/Simulador/Hello4.asm",
+				"/D/Teste Ambiente/Hello4.asm",
+				"/D/Teste Ambiente/leString.asm",
+				"/D/Teste Ambiente/forca.asm",
+				"/D/Teste Ambiente - Copia/Hello4.asm",
+				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+				"/D/Teste Ambiente/printForca.asm",
+				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/untitled.sublime-build",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.561/Assembly ICMC.sublime-build",
+				"/D/Documentos/USP/Prat_OrgC/Versao_05_2013/32_bits/Forca01.asm",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.040/Completion Rules.tmPreferences",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.959/C++.tmLanguage",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.091/C++.sublime-settings",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.196/C++.sublime-build",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.532/C.tmLanguage",
+				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.207/Batch File.tmLanguage",
+				"/D/Teste Ambiente/Sublime Text 3/Data/Cache/Assembly ICMC/Assembly_ICMC_Syntax.tmLanguage",
+				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/Assembly ICMC.sublime-build",
+				"/D/Documentos/USP/Prat_OrgC/Aula_2015-03-04/Hello4.asm",
+				"/D/Teste Ambiente/Hello4.mif",
+				"/D/Teste Ambiente/Versao_05_2013/Exemplos/Hello4.asm"
 			],
 			"find":
 			{
-				"height": 0.0
+				"height": 39.0
 			},
 			"find_in_files":
 			{
@@ -72,6 +156,34 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"print_menu_messages",
+					"print_start_screens",
+					"posicaoXJogadorEsq",
+					"cenario",
+					"velocidade",
+					"imprime_tela_sobre",
+					"zera_tela",
+					"reposicionar_jogadores",
+					"imprime_string_sobre",
+					"imprime_tela_sobre",
+					"espera_entrada",
+					"cenario4linha1",
+					"delay",
+					"iterador",
+					"delay",
+					"velocidade",
+					"get_char",
+					"print_start_screens",
+					"fundoGerado",
+					"delay",
+					"velocidadeDelay",
+					"delay",
+					"estado",
+					"delay",
+					"r*",
+					"r3",
+					"r2",
+					"r3"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -98,15 +210,75 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 29989,
+								"buffer_size": 39216,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										4427,
-										4427
+										19340,
+										19356
+									]
+								],
+								"settings":
+								{
+									"spell_check": true,
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong_test.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 30889,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										9466,
+										9484
+									]
+								],
+								"settings":
+								{
+									"auto_name": "pong_test",
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 3772.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 49514,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										976,
+										1014
 									]
 								],
 								"settings":
@@ -119,7 +291,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 2,
 							"type": "text"
 						}
 					]
@@ -127,7 +299,7 @@
 			],
 			"incremental_find":
 			{
-				"height": 0.0
+				"height": 31.0
 			},
 			"input":
 			{
@@ -156,15 +328,19 @@
 				]
 			},
 			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 179.0
+			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"position": "0,2,3,-32000,-32000,-1,-1,591,52,52,708",
+			"position": "0,2,3,-32000,-32000,-1,-1,646,31,107,687",
 			"project": "",
 			"replace":
 			{
-				"height": 0.0
+				"height": 58.0
 			},
 			"save_all_on_build": true,
 			"select_file":

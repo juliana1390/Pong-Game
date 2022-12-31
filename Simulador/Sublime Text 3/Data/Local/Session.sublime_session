@@ -1,213 +1,12 @@
 {
 	"folder_history":
 	[
-		"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador"
 	],
 	"last_version": 3065,
-	"last_window_id": 3,
+	"last_window_id": 1,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 480.0,
-		"new_window_settings":
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-					[
-						"Compara_c",
-						"Compara_Case1	abc"
-					],
-					[
-						"x",
-						"x"
-					],
-					[
-						"string",
-						"string	string"
-					],
-					[
-						"digL",
-						"digLetra_Loop"
-					],
-					[
-						"inc",
-						"incloop"
-					]
-				]
-			},
-			"build_system": "Packages/Assembly ICMC/Assembly ICMC.sublime-build",
-			"command_palette":
-			{
-				"height": 81.0,
-				"selected_items":
-				[
-					[
-						"insta",
-						"Package Control: Install Package"
-					]
-				],
-				"width": 400.0
-			},
-			"console":
-			{
-				"height": 126.0,
-				"history":
-				[
-					"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"file_history":
-			[
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/entendendo_o_código.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/forca_novo.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Versao_05_2013/Exemplos/fatorial.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/JogoDaForca.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Hello4.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/snake.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/velha.zip",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha_bug.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/palito.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha_funcionando.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/JogoVelha.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha2.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/UAF.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/evilSquare.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/ppong.asm",
-				"/D/Simulador/Hello4.asm",
-				"/D/Teste Ambiente/Hello4.asm",
-				"/D/Teste Ambiente/leString.asm",
-				"/D/Teste Ambiente/forca.asm",
-				"/D/Teste Ambiente - Copia/Hello4.asm",
-				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
-				"/D/Teste Ambiente/printForca.asm",
-				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/untitled.sublime-build",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.561/Assembly ICMC.sublime-build",
-				"/D/Documentos/USP/Prat_OrgC/Versao_05_2013/32_bits/Forca01.asm",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.040/Completion Rules.tmPreferences",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.959/C++.tmLanguage",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.091/C++.sublime-settings",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.196/C++.sublime-build",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.532/C.tmLanguage",
-				"/C/Users/CARLOS~1/AppData/Local/Temp/Rar$DRa0.207/Batch File.tmLanguage",
-				"/D/Teste Ambiente/Sublime Text 3/Data/Cache/Assembly ICMC/Assembly_ICMC_Syntax.tmLanguage",
-				"/D/Teste Ambiente/Sublime Text 3/Data/Packages/User/Assembly ICMC.sublime-build",
-				"/D/Documentos/USP/Prat_OrgC/Aula_2015-03-04/Hello4.asm",
-				"/D/Teste Ambiente/Hello4.mif",
-				"/D/Teste Ambiente/Versao_05_2013/Exemplos/Hello4.asm"
-			],
-			"find":
-			{
-				"height": 30.0
-			},
-			"find_in_files":
-			{
-				"height": 0.0,
-				"where_history":
-				[
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-					" \n",
-					"erro",
-					"r7",
-					"&",
-					"cor",
-					"verde",
-					"cobra",
-					"cenario",
-					"desenha",
-					"string",
-					"r*",
-					"r3",
-					"r2",
-					"r3"
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": false,
-				"regex": false,
-				"replace_history":
-				[
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"incremental_find":
-			{
-				"height": 30.0
-			},
-			"input":
-			{
-				"height": 0.0
-			},
-			"menu_visible": true,
-			"output.exec":
-			{
-				"height": 104.0
-			},
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"replace":
-			{
-				"height": 56.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 210.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			}
-		},
-		"new_window_width": 640.0
 	},
 	"windows":
 	[
@@ -217,96 +16,12 @@
 				"selected_items":
 				[
 					[
-						"menu",
-						"menu_loop	abc"
+						"move_",
+						"move_player_pad"
 					],
 					[
-						"get",
-						"get_char	abc"
-					],
-					[
-						"print",
-						"print_screen2	abc"
-					],
-					[
-						"start",
-						"startScrline1	abc"
-					],
-					[
-						"dr",
-						"draw_pad2	abc"
-					],
-					[
-						"pad",
-						"draw_pad"
-					],
-					[
-						"dra",
-						"draw_pad2	abc"
-					],
-					[
-						"si",
-						"single_player	abc"
-					],
-					[
-						"Single",
-						"singlePlayer"
-					],
-					[
-						"multi",
-						"multi_player	abc"
-					],
-					[
-						"clear",
-						"clear_screen	abc"
-					],
-					[
-						"draw",
-						"draw_game_over	abc"
-					],
-					[
-						"drwa",
-						"draw_game_over	abc"
-					],
-					[
-						"game",
-						"draw_game_over"
-					],
-					[
-						"ga",
-						"draw_game_over"
-					],
-					[
-						"TryList",
-						"TryListSize	abc"
-					],
-					[
-						"PrintCollo",
-						"PrintColorfullString	abc"
-					],
-					[
-						"PrintCl",
-						"PrintColorfullString	abc"
-					],
-					[
-						"Pu",
-						"PurpleColor	abc"
-					],
-					[
-						"REa",
-						"Repeated	abc"
-					],
-					[
-						"Compara_c",
-						"Compara_Case1	abc"
-					],
-					[
-						"x",
-						"x"
-					],
-					[
-						"string",
-						"string	string"
+						"velocida",
+						"velocidadeDelay"
 					],
 					[
 						"digL",
@@ -321,11 +36,72 @@
 			"buffers":
 			[
 				{
+					"contents": "; PONG GAME\n\n; ############# TABLE OF COLORS #############\n\n; 0 white                           0000 0000\n; 256 brown                         0001 0000\n; 512 green                         0010 0000\n; 768 olive                         0011 0000\n; 1024 marine blue                  0100 0000\n; 1280 purple                       0101 0000\n; 1536 teal                         0110 0000\n; 1792 silver                       0111 0000\n; 2048 gray                         1000 0000\n; 2304 red                          1001 0000\n; 2560 lime                         1010 0000\n; 2816 yellow                       1011 0000\n; 3072 blue                         1100 0000\n; 3328 pink                         1101 0000\n; 3584 aqua                         1110 0000\n; 3840 white                        1111 0000\n\n; ###########################################\n\njmp main\n\n; MENU MESSAGES -------------------------------------------------\n    message00: string \"***********    MAIN MENU    ************\"\n    message01: string \"**          CHOOSE THE MODE:          **\"\n    message02: string \"##       SINGLEPLAYER - PRESS S       ##\"\n    message03: string \"    Use the keys to move the paddle:    \"\n    message04: string \"          'w' UP and 's' down           \"\n    message05: string \"**         CREDITS - PRESS C          **\"\n    message06: string \"**           EXIT - PRESS E           **\"\n\n\n; GAME OVER/VICTORY MESSAGES ------------------------------------\n    overm00: string \"************    GAME OVER    *************\"\n    overm01: string \"##               WINNER:                ##\"\n    overm02: string \"             PLAYER 1 WON!!!              \"\n    overm03: string \"             PLAYER 2 WON!!!              \"\n    overm04: string \"                YOU WON!!!                \"\n    overm05: string \"**          PLAY AGAIN - PRESS A        **\"\n    overm06: string \"**            EXIT - PRESS E            **\"\n\n; CREDITS -------------------------------------------------------\n    credm00: string \"*************    CREDITS    ************\"\n    credm01: string \"               Developers:              \"\n    credm02: string \"         JULIANA DA SILVA SANTOS        \"\n    credm03: string \"           RENAN SILVA SORIANO          \"\n    credm04: string \"           Graduation Subject:          \"\n    credm05: string \" Computer Organization and Architecture \"\n    credm06: string \"               Professor:               \"\n    credm07: string \"        EDUARDO DO VALLE SIMOES         \"\n\n\n; VARIABLES -------------------------------------------------------\n    char: var #1            ; input from keyboard, size: 1 char\n    player_pad: var #4      ; player paddle label, size: 4 char\n    AI_pad: var #4          ; AI paddle label, size: 4 char\n    ;player_pad_speed: var #1\n    ;static player_pad_speed + #0, #3000\n    \n    delay_speed : var #1\n    static delay_speed + #0, #2000\n; ===============================================================\n; MAIN ==========================================================\n; ===============================================================    \nmain:\n    \n    call clear_screen\n    call print_start_screens\n    call get_char\n    call clear_screen\n    call print_menu_messages\n    \n    menu_loop:\n        call get_char\n        loadn r0, #'s'\n        load r1, char\n        cmp r0, r1\n        jeq single_player         ; singlePlayer    \n\n        loadn r0, #'m'\n        cmp r0, r1\n        jeq multi_player          ; multiPlayer \n        \n        loadn r0, #'c'\n        cmp r0, r1\n        jeq print_credits         ; credits\n\n        loadn r0, #'e'\n        cmp r0, r1\n        jmp menu_loop\n\n\n\n    call DELAY\n    inc r0  ;c++\n    jmp single_player\n   \n\nhalt\n; ===============================================================\n; FUNCTIONS =====================================================\n; ===============================================================   \n\n    single_player:\n        call clear_screen\n        call move_player_pad\n        ;jmp single_player\n\n; MOVE PLAYER PAD -----------------------------------------------\nmove_player_pad:\n    push r0\n    push r1\n    push r2\n\n    load r0, char   ; loads char address\n\n    inchar r1       ; keyboard input\n    loadn r2, #'w'  ; loads w into r2\n    cmp r1, r2      ; compares input to w\n    jeq move_up     ; if (input == w), jumps to move_up\n\n    loadn r2, #'s'  ; loads s to r2\n    cmp r1, r2      ; compares input to s\n    jeq move_down   ; if (input == s), jumps to move_down\n    \n    pop r2\n    pop r1\n    pop r0\n    rts\n\n; DELAY ---------------------------------------------------------\ndelay:\n\n                        ;Utiliza Push e Pop para nao afetar os Ristradores do programa principal\n    push r0\n    push r1\n    \n    loadn r1, #2  ; a\n   delay_2:                ;Quebrou o contador acima em duas partes (dois loops de decremento)\n    load r0, delay_speed ; b\n   delay_1: \n    dec r0                  ; (4*a + 6)b = 1000000  == 1 seg  em um clock de 1MHz\n    jnz delay_1 \n    dec r1\n    jnz delay_2\n    \n    pop r1\n    pop r0\n    \n    rts \n    \nupdate_speed:\n    push r0\n    push r1\n    push r2\n    \n    load r0, delay_speed\n    loadn r1, #5\n    loadn r2, #300\n    \n    sub r0, r0, r1\n    \n    cmp r0, r2\n    \n    jel update_max_speed\n    \n    store delay_speed, r0\n    \nupdate_max_speed:   \n    \n    pop r2\n    pop r1\n    pop r0\n    \n    rts\n    \n    \nDELAY:\n    push fr                 ; Salvar registradores\n    push r0\n    push r1\n    push r2\n\n    loadn r0, #0\n\n    ; VARIAVEL PARA REAJUSTAR A VELOCIDADE DO JOGO\n    loadn r2, #1000             ; Inicio loop externo, decrementa r2 até chegar a 0\n    load r3, iterador\n    sub r2, r2, r3\n    DELAY_L1:\n\n    loadn r1, #1000        ; Inicio do loop interno, decremente r1 até chegar a 0\n    DELAY_L2:\n    dec r1                  ; Parte para decrementar o valor de r1\n    cmp r1, r0\n    jne DELAY_L2\n    \n    dec r2                  ; Parte para decrementar o valor de r2\n    cmp r2, r0\n    jne DELAY_L1\n\n    pop r2                  ; Reatribuir registradores\n    pop r1\n    pop r0\n    pop fr\n    rts\n; MOVE UP -------------------------------------------------------\nmove_up:\n    push r0\n    push r1\n    push r2\n\n    load r0, player_pad     ; loads the address of pad\n    loadn r1, #1            ; max position up\n    loadn r2, #40           ; increments/decrements a whole line\n\n    cmp r0, r1              ; compares the position of paddle to max position\n    jeq move_up_end         ; if they are equal ends the movement\n\n    sub r0, r0, r2          ; decrements one line\n    call clear_player_pad   ; clears the pad\n    store player_pad, r0    ; stores the decremented char\n    call draw_player_pad    ; prints\n\n    move_up_end:\n        pop r2\n        pop r1\n        pop r0\n        rts\n\n; MOVE DOWN -----------------------------------------------------\nmove_down:\n    push r0\n    push r1\n    push r2\n\n    load r0, player_pad     ; loads the address of pad\n    loadn r1, #1001         ; max position down\n    loadn r2, #40           ; increments/decrements a whole line\n\n    cmp r0, r1              ; compares the position of paddle to max position\n    jeq move_down_end         ; if they are equal ends the movement\n\n    add r0, r0, r2          ; increments one line\n    call clear_player_pad   ; clears the pad\n    store player_pad, r0    ; stores the decremented char\n    call draw_player_pad    ; prints\n\n    move_down_end:\n        pop r2\n        pop r1\n        pop r0\n        rts\n\n; DRAW PLAYER PAD -----------------------------------------------\ndraw_player_pad:\n    push r0     ; keeps the address from paddle\n    push r1     ; keeps the position where to print\n    push r2     ; keeps the char\n    push r3     ; keeps color\n\n    load r0, player_pad ; loads the adress of paddle\n    loadn r3, #3328     ; loads the color of paddle\n\n    loadn r1, #521      ; position of char 1 ------------- 1\n    add r1, r1, r0      ; relates char to paddle\n\n    loadn r1, #253      ; char\n    add r2, r2, r3      ; adds color to char\n    outchar r2, r1      ; prints\n\n    loadn r1, #561      ; position of char 2 ------------- 2\n    loadn r2, #253      ; char 2\n    add r2, r2, r3\n    outchar r2, r1\n\n    loadn r1, #601      ; position of char 3 ------------- 3\n    loadn r2, #253      ; char 3\n    add r2, r2, r3\n    outchar r2, r1\n   \n    loadn r1, #641      ; position of char 4 ------------- 4\n    loadn r2, #253      ; char 4\n    add r2, r2, r3\n    outchar r2, r1\n\n    loadn r1, #681      ; position of char 5 ------------- 5\n    loadn r2, #253      ; char 5\n    add r2, r2, r3\n    outchar r2, r1\n\n    pop r3\n    pop r2\n    pop r1\n    pop r0\n    rts\n\n; DRAW AI PAD ---------------------------------------------------\ndraw_AI_pad:\n    push r0     ; keeps the address from paddle\n    push r1     ; keeps the position where to print\n    push r2     ; keeps the char\n    push r3     ; keeps color\n\n    load r0, AI_pad     ; loads the adress of paddle\n    loadn r3, #3072     ; loads the color of paddle\n\n    loadn r1, #558      ; position of char 1 ------------- 1\n    add r1, r1, r0      ; relates char to paddle\n\n    loadn r1, #253      ; char\n    add r2, r2, r3      ; adds color to char\n    outchar r2, r1      ; prints\n\n    loadn r1, #598      ; position of char 2 ------------- 2\n    loadn r2, #253      ; char 2\n    add r2, r2, r3\n    outchar r2, r1\n\n    loadn r1, #638      ; position of char 3 ------------- 3\n    loadn r2, #253      ; char 3\n    add r2, r2, r3\n    outchar r2, r1\n   \n    loadn r1, #678      ; position of char 4 ------------- 4\n    loadn r2, #253      ; char 4\n    add r2, r2, r3\n    outchar r2, r1\n\n    loadn r1, #718      ; position of char 5 ------------- 5\n    loadn r2, #253      ; char 5\n    add r2, r2, r3\n    outchar r2, r1\n\n    pop r3\n    pop r2\n    pop r1\n    pop r0\n    rts    \n\n; CLEAR PLAYER PAD ----------------------------------------------\nclear_player_pad:\n    push r0\n    push r1\n    push r2\n    push r3\n    \n    load r0, player_pad ; loads the adress of paddle\n    loadn r3, #40       ; increments one whole line\n\n    loadn r1, #521      ; position of char 1\n    add r1, r1, r0\n    add r1, r1, r3      ; next line\n    \n    loadn r2, #' '\n    outchar r2, r1      ; clear char 1\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 2\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 3\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 4\n    add r1, r1, r3\n\n    outchar r2, r1      ; clear char 5\n    add r1, r1, r3  \n    \n    pop r3\n    pop r2\n    pop r1\n    pop r0\n    rts\n; DRAW AI PAD ---------------------------------------------------\nclear_AI_pad:\n    push r0\n    push r1\n    push r2\n\n    load r0, AI_pad     ; loads the adress of paddle\n    loadn r3, #40       ; increments one whole line\n\n    loadn r1, #558      ; position of char 1\n    add r1, r1, r0\n    add r1, r1, r3      ; next line\n    \n    loadn r2, #' '\n    outchar r2, r1      ; clear char 1\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 2\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 3\n    add r1, r1, r3\n    \n    outchar r2, r1      ; clear char 4\n    add r1, r1, r3\n\n    outchar r2, r1      ; clear char 5\n    add r1, r1, r3  \n\n    pop r2\n    pop r1\n    pop r0\n    rts\n\n; MULTI PLAYER --------------------------------------------------\nmulti_player:\n    push r0\n    push r1\n    push r3\n\n    call clear_screen\n    m01: string \"Multi Player Game\"\n    loadn r0, #600\n    loadn r1, #m01\n    loadn r3, #2560\n    call print_routine\n    call get_char\n\n    pop r3\n    pop r2\n    pop r1\n    rts\n\n\n; CLEAR SCREEN --------------------------------------------------\nclear_screen:\n; clear the screen from the last position(1200) to the first one(0)\n  push r0\n  push r1\n\n  loadn r0, #1200     ; final position\n  loadn r1, #' '      ; 'empty' space to print\n\n  clear_screen_loop:\n    dec r0\n    outchar r1, r0          ; prints in 1st position\n    jnz clear_screen_loop   ; if != 0, go to loop \n\n\n  pop r1\n  pop r0\n  rts\n\n; GET CHAR ------------------------------------------------------\nget_char:   \n  ; routine to get input from keyboard\n  push r0\n  push r1     \n\n  loadn r1, #255        ; ' ' blank space\n  \n  get_char_loop:          \n    inchar r0           ; input from keyboard\n    cmp r0, r1          ; compares input to ' ' (nothing typed)\n    jeq get_char_loop   ; if so, starts the loop again\n\n    store char, r0       ; stores the input\n\n  pop r1\n  pop r0\n  rts\n\n; ===================================================================\n; BLANK SCREEN ======================================================\n; ===================================================================\n    blankScrline0:  string \"                                        \"\n    blankScrline1:  string \"                                        \"\n    blankScrline2:  string \"                                        \"\n    blankScrline3:  string \"                                        \"\n    blankScrline4:  string \"                                        \"\n    blankScrline5:  string \"                                        \"\n    blankScrline6:  string \"                                        \"\n    blankScrline7:  string \"                                        \"\n    blankScrline8:  string \"                                        \"\n    blankScrline9:  string \"                                        \"\n    blankScrline10: string \"                                        \"\n    blankScrline11: string \"                                        \"\n    blankScrline12: string \"                                        \"\n    blankScrline13: string \"                                        \"\n    blankScrline14: string \"                                        \"\n    blankScrline15: string \"                                        \"\n    blankScrline16: string \"                                        \"\n    blankScrline17: string \"                                        \"\n    blankScrline18: string \"                                        \"\n    blankScrline19: string \"                                        \"\n    blankScrline20: string \"                                        \"\n    blankScrline21: string \"                                        \"\n    blankScrline22: string \"                                        \"\n    blankScrline23: string \"                                        \"\n    blankScrline24: string \"                                        \"\n    blankScrline25: string \"                                        \"\n    blankScrline26: string \"                                        \"\n    blankScrline27: string \"                                        \"\n    blankScrline28: string \"                                        \"\n    blankScrline29: string \"                                        \"\n\n\n; ===================================================================\n; START SCREENS =====================================================\n; ===================================================================\n\n    ; START SCREEN 1 ------------------------------------------------\n    startScrline0:  string \"                                        \"\n    startScrline1:  string \"                                        \"\n    startScrline2:  string \"  @@@@@@            @@@  @@@            \"\n    startScrline3:  string \"  @@  @@@    @@@    @@@@ @@@   @@@@@@   \"\n    startScrline4:  string \"  @@@@@@    @@@@@   @@@@@@@@  @@@       \"\n    startScrline5:  string \"  @@@      @@@@@@   @@@ @@@@  @@@  @@@  \"\n    startScrline6:  string \"  @@@       @@@@@   @@@  @@@  @@@   @@  \"\n    startScrline7:  string \"             @@@               @@@@@@   \"\n    startScrline8:  string \"              #                         \"\n    startScrline9:  string \"              #                         \"\n    startScrline10: string \"                                        \"\n    startScrline11: string \"                                        \"\n    startScrline12: string \"                                        \"\n    startScrline13: string \"                                        \"\n    startScrline14: string \"                                        \"\n    startScrline15: string \"                                        \"\n    startScrline16: string \"                                        \"\n    startScrline17: string \"                                        \"\n    startScrline18: string \"                                        \"\n    startScrline19: string \"                                        \"\n    startScrline20: string \"                                        \"\n    startScrline21: string \"                                        \"\n    startScrline22: string \"                                        \"\n    startScrline23: string \"      P                                 \"\n    startScrline24: string \"             N         O                \"\n    startScrline25: string \"                             A          \"\n    startScrline26: string \"         S         E                    \"\n    startScrline27: string \"                                        \"\n    startScrline28: string \"                                        \"\n    startScrline29: string \"                                        \"\n\n\n    ; START SCREEN 2 -------------------------------------------------\n    start2Scrline0:  string \"                                        \"\n    start2Scrline1:  string \"                                        \"\n    start2Scrline2:  string \"                                        \"\n    start2Scrline3:  string \"            @@@                         \"\n    start2Scrline4:  string \"           @@@@@                        \"\n    start2Scrline5:  string \"           @@@@@@                       \"\n    start2Scrline6:  string \"           @@@@@                        \"\n    start2Scrline7:  string \"            @@@                         \"\n    start2Scrline8:  string \"             #                          \"\n    start2Scrline9:  string \"             #                          \"\n    start2Scrline10: string \"                                        \"\n    start2Scrline11: string \"                                        \"\n    start2Scrline12: string \"                                        \"\n    start2Scrline13: string \"                                        \"\n    start2Scrline14: string \"   @@@@@@            @@@   @@@          \"\n    start2Scrline15: string \"  @@@        @@@@@   @@@   @@@  @@@@@   \"\n    start2Scrline16: string \"  @@@  @@@  @@   @@  @@ @ @ @@  @@      \"\n    start2Scrline17: string \"  @@@   @@  @@@@@@@  @@  @  @@  @@@@    \"\n    start2Scrline18: string \"   @@@@@@   @@   @@  @@     @@  @@      \"\n    start2Scrline19: string \"            @@   @@             @@@@@   \"\n    start2Scrline20: string \"                                        \"\n    start2Scrline21: string \"                                        \"\n    start2Scrline22: string \"                                        \"\n    start2Scrline23: string \"                           S            \"\n    start2Scrline24: string \"       R                                \"\n    start2Scrline25: string \"              Y                         \"\n    start2Scrline26: string \"                              R         \"\n    start2Scrline27: string \"          S         Y                   \"\n    start2Scrline28: string \"                                        \"\n    start2Scrline29: string \"                                        \"\n\n    ; START SCREEN 3 -------------------------------------------------\n    start3Scrline0:  string \"                                        \"\n    start3Scrline1:  string \"                                        \"\n    start3Scrline2:  string \"                                        \"\n    start3Scrline3:  string \"                                        \"\n    start3Scrline4:  string \"                                        \"\n    start3Scrline5:  string \"                                        \"\n    start3Scrline6:  string \"                                        \"\n    start3Scrline7:  string \"                                        \"\n    start3Scrline8:  string \"                                        \"\n    start3Scrline9:  string \"                                        \"\n    start3Scrline10: string \"                                        \"\n    start3Scrline11: string \"                                        \"\n    start3Scrline12: string \"                                        \"\n    start3Scrline13: string \"                                        \"\n    start3Scrline14: string \"                                        \"\n    start3Scrline15: string \"                                        \"\n    start3Scrline16: string \"                                        \"\n    start3Scrline17: string \"                                        \"\n    start3Scrline18: string \"                                        \"\n    start3Scrline19: string \"                                        \"\n    start3Scrline20: string \"                                        \"\n    start3Scrline21: string \"                                        \"\n    start3Scrline22: string \"                                        \"\n    start3Scrline23: string \"            A         T                 \"\n    start3Scrline24: string \"                            T           \"\n    start3Scrline25: string \"        E         K                     \"\n    start3Scrline26: string \"                                        \"\n    start3Scrline27: string \"                               T        \"\n    start3Scrline28: string \"                                        \"\n    start3Scrline29: string \"                                        \"\n      \n; GAME OVER -----------------------------------------------------\ndraw_game_over:\n    push r0\n    push r1\n    push r2\n    push r3\n\n    over01: string \"                                        \"\n    over02: string \"   @@@@@@            @@@   @@@          \"\n    over03: string \"  @@@        @@@@@   @@@   @@@  @@@@@   \"\n    over04: string \"  @@@  @@@  @@   @@  @@ @ @ @@  @@      \"\n    over05: string \"  @@@   @@  @@@@@@@  @@  @  @@  @@@@    \"\n    over06: string \"   @@@@@@   @@   @@  @@     @@  @@      \"\n    over07: string \"            @@   @@             @@@@@   \"\n    over08: string \"                                        \"\n    over09: string \"                                        \"\n    over10: string \"   @@@@@@             @@@@@@            \"\n    over11: string \"            @@@@@@              @@@@@@  \"\n    over12: string \"                                        \"\n    over13: string \"                                        \"\n    over14: string \"   @@@@@              @@@@@             \"\n    over15: string \"  @@@@@@@  @@     @@  @@     @@@@@@@    \"\n    over16: string \"  @@@ @@@  @@@   @@@  @@@@   @@   @@    \"\n    over17: string \"  @@@@@@@   @@@ @@@   @@     @@@@@@@    \"\n    over18: string \"   @@@@@     @@ @@    @@@@@  @@  @@     \"\n    over19: string \"              @@@            @@   @@    \"\n    over20: string \"                                        \"\n    over21: string \"                                        \"\n    over22: string \"                                        \"\n    over23: string \"                                        \"\n    over24: string \"                                        \"\n    over25: string \"      Y     L                           \"\n    over26: string \"       O     O                          \"\n    over27: string \"        U     S                         \"\n    over28: string \"               E                        \"\n    over29: string \"                                        \"\n    over30: string \"                                        \"\n\n\n; ===============================================================\n; PRINT ROUTINES ================================================\n; ===============================================================\n\n    ; START SCREENS ---------------------------------------------------------------------- \n    print_start_screens:\n        push r1\n        push r2\n        \n        loadn r1, #startScrline0    ; first char of first line address from start screen 1\n        loadn r2, #3072             ; yellow color\n        call print_screen2          ; prints full start screen 1\n          \n        loadn r1, #start2Scrline0   ; first char of first line address from start screen 2\n        loadn r2, #3328             ; aqua color\n        call print_screen2\n          \n        loadn r1, #start3Scrline0   ; first char of first line address from start screen 3\n        loadn r2, #2816             ; aqua color\n        call print_screen2\n\n        pop r1\n        pop r2\n        rts\n\n    ; PRINT MENU MESSAGES --------------------------------------------------------------\n        ; r0 = Position on the screen where the 1st character of the message will be printed.\n        ; r1 = Address where the message begin.\n        ; Obs: The message will be printed until find \"/0\".\n\n    print_menu_messages:\n        push r0     ; keeps r0 onto the stack to be used by the routine (screen position)\n        push r1     ; keeps r1 onto the stack to be used by the routine (message content)\n        push r3     ; keeps r3 onto the stack to be used by the routine (color)\n\n        loadn r0, #80          ; loads the position 120 from screen\n        loadn r1, #message00    ; loads the message 0 content\n        loadn r3, #2560         ; loads the color\n        call print_routine      ; print\n\n        loadn r0, #280          ; message 1   \n        loadn r1, #message01\n        loadn r3, #2816\n        call print_routine\n\n        loadn r0, #520          ; message 2\n        loadn r1, #message02\n        loadn r3, #3328\n        call print_routine\n\n        loadn r0, #640          ; message 3\n        loadn r1, #message03\n        loadn r3, #3328\n        call print_routine\n\n        loadn r0, #720         ; message 4\n        loadn r1, #message04\n        loadn r3, #3328\n        call print_routine\n\n        loadn r0, #1000         ; message 5\n        loadn r1, #message05\n        loadn r3, #2560\n        call print_routine\n\n        loadn r0, #1080         ; message 6\n        loadn r1, #message06\n        loadn r3, #2560\n        call print_routine\n\n\n        pop r2\n        pop r1\n        pop r3\n        rts        ; returns to game flow\n\n    ; PRINT CREDITS --------------------------------------------------------------------\n    print_credits:\n        push r0\n        push r1\n        push r3\n\n        call clear_screen\n        loadn r0, #120          ; message 1: position\n        loadn r1, #credm00      ; message 1: content\n        loadn r3, #2560         ; message 1: color\n        call print_routine\n        loadn r0, #200          ; message 2\n        loadn r1, #credm01      ; ...\n        loadn r3, #2816         ; ...\n        call print_routine\n        loadn r0, #280          ; message 3\n        loadn r1, #credm02      ; ...\n        loadn r3, #3328\n        call print_routine\n        loadn r0, #360          ; message 4\n        loadn r1, #credm03\n        loadn r3, #3328\n        call print_routine\n        loadn r0, #640          ; message 5\n        loadn r1, #credm04\n        loadn r3, #2816\n        call print_routine\n        loadn r0, #720          ; message 6\n        loadn r1, #credm05\n        loadn r3, #3328\n        call print_routine\n        loadn r0, #1000         ; message 7\n        loadn r1, #credm06\n        loadn r3, #2816\n        call print_routine\n        loadn r0, #1080         ; message 8\n        loadn r1, #credm07\n        loadn r3, #3328\n        call print_routine\n\n        call get_char\n\n        pop r0\n        pop r1\n        pop r3\n        rts\n\n    ; STD PRINT ROUTINE ----------------------------------------------------------------\n    print_routine:             \n        push r0     ; position\n        push r1     ; message\n        push r2     ; for subroutine use\n        push r3     ; color\n        push r4     ; stopping criterion\n\n        loadn r4, #'\\0'\n\n        print_loop:    \n            loadi r2, r1        ; loads the 1st character of the message into r2\n            cmp r2, r4          ; compares character from message to stopping criterion\n            jeq exit_print      ; is so: exit\n            add r2, r2, r3      ; if not: adds color to character\n            outchar r2, r0      ; prints character\n            inc r0              ; increments the position\n            inc r1              ; increments the character\n            jmp print_loop      ; jumps to print_loop, beginning of subroutine\n            \n        exit_print: \n            pop r4\n            pop r3\n            pop r2      \n            pop r1      \n            pop r0      \n            rts\n\n    ; PRINT SCREEN 2 -------------------------------------------------------------------\n    print_screen2:\n        ; this routine prints scenes on screen\n\n        push r0   ; for subroutine use\n        push r1   ; keeps the address of first char from first line of the scene\n        push r2   ; keeps the color\n        push r3   ; for subroutine use\n        push r4   ; for subroutine use\n        push r5   ; for subroutine use\n        push r6   ; for subroutine use\n\n        loadn r0, #0              ; first position of the screen\n        loadn r3, #40             ; increments the position\n        loadn r4, #41             ; increments the pointer for lines on screen\n        loadn r5, #1200           ; end of the screen\n        loadn r6, #blankScrline0  ; address of first char from first line of the scene\n\n        print_screen2_loop:\n            call print_string2      ; prints char by char from the line\n            add r0, r0, r3          ; increments position to second line on screen =>  r0 = r0 + 40\n            add r1, r1, r4          ; increments the pointer to the beginning of next line in memory (40 + 1 because of /0 !!) => r1 = r1 + 41\n            add r6, r6, r4          ; increments the pointer to the beginning of next line in memory (40 + 1 because of /0 !!) => r1 = r1 + 41\n            cmp r0, r5              ; compares r0 to 1200\n            jne print_screen2_loop  ; while r0 < 1200\n\n        pop r6  ; get register values used in subroutine of the stack\n        pop r5\n        pop r4\n        pop r3\n        pop r2\n        pop r1\n        pop r0\n        rts\n             \n    ; PRINT STRING 2 -------------------------------------------------------------------\n    print_string2:\n        ; routine for message/string print\n\n        push r0   ; screen position where the 1st char will be printed\n        push r1   ; keeps the address of message beginning\n        push r2   ; keeps message color\n        push r3   ; for subroutine use\n        push r4   ; for subroutine use\n        push r5   ; for subroutine use\n        push r6   ; for subroutine use\n\n\n        loadn r3, #'\\0' ; stopping criterion / end of the message\n        loadn r5, #' '  ; blank space\n\n        print_string2_loop:  \n            loadi r4, r1              ; loads value from r1 to r4\n            cmp r4, r3                ; compares the value (char of message) to \\0\n            jeq exit_print_string2    ; if char is \\0: the end of the message came, then get out of loop\n\n        cmp r4, r5                ; if char is ' ' (blank space) jumps to skip_print_2_loop (then another char won't disappear)\n        jeq skip_print_string2\n\n        add r4, r2, r4    ; sums the color to char\n        outchar r4, r0    ; prints the char on screen\n        storei r6, r4     ; stores the char into r6\n\n        skip_print_string2:\n            inc r0                    ; increments screen position\n            inc r1                    ; increments string pointer\n            inc r6                    ; increments string pointer from blank screen (first one)\n            jmp print_string2_loop\n\n        exit_print_string2: \n        pop r6\n        pop r5\n        pop r4\n        pop r3\n        pop r2\n        pop r1\n        pop r0\n        rts\n",
 					"file": "/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
+					"file_size": 31809,
+					"file_write_time": 133169369791483261,
 					"settings":
 					{
-						"buffer_size": 28104,
+						"buffer_size": 31670,
 						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong.asm",
+					"settings":
+					{
+						"buffer_size": 49514,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/arrow.asm",
+					"settings":
+					{
+						"buffer_size": 25846,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hamster.asm",
+					"settings":
+					{
+						"buffer_size": 23349,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Icenic.asm",
+					"settings":
+					{
+						"buffer_size": 24035,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/naveSimoes.asm",
+					"settings":
+					{
+						"buffer_size": 32630,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/orgame.asm",
+					"settings":
+					{
+						"buffer_size": 34309,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.4.0 Release Notes\n  \n   -----------------------------------------------------------------------\n  | NOTICE: This will be the final release of Package Control supporting  |\n  | - Sublime Text 2                                                      |\n  | - Sublime Text 3 beta builds (<3143)                                  |\n   -----------------------------------------------------------------------\n  | Please see https://sublimetext.com for an updated build               |\n   -----------------------------------------------------------------------\n  \n  New features include:\n  \n   - Support for repositories hosted on https://gitlab.com - by TheSecEng\n  \n   - An alternative TLS implementation based on the oscrypto Python\n     library, which uses native operating system TLS libraries and\n     certificate handling. See the \"downloader_precedence\" setting to enable.\n  \n   - Preferences now use the side-by-side edit mode\n  \n   - Added command palette entries to enable and disable debug mode for\n     troubleshooting and bug reports\n  \n  Bug fixes include:\n  \n   - Fixed operation on macOS 11.0 Big Sur - by TheSecEng\n  \n   - Improved handling of invalid dependencies - by deathaxe\n  \n   - Corrected handling of unsuccessful downloads with wget - by deathaxe\n  \n   - Fixed various issues with the HTTP caching - by deathaxe\n  \n   - Updated the BitBucket provider to use the 2.0 API - deathaxe\n  \n   - Packages installed via symlinks are now unlinked instead of being\n     deleted when being removed or cleaned up - by rchl\n  \n   - Improved install performance of packages with large numbers of\n     files - by BenjaminSchaaf\n  \n   - Fixed handling of auth with the wininet downloader - by NicholasBuse\n  \n   - Fixed handling BitBucket repositories without a nickname\n  \n   - Resolved deadlocks and ignored packages occuring when removing multiple\n     dependencies at once\n  \n   - Package messages are no longer printed with trailing whitespace on lines\n     with no text - by dnicolson\n  \n\n  Version 3.2 Release Notes\n  \n  This version of Package Control focuses on bug-fixes, with notable changes\n  including:\n  \n   - OS X TLS trust roots are exported using APIs to prevent the error message\n     displayed to some El Capitan users\n  \n   - Theme, syntax and color scheme upgrades have been improved and should result\n     in fewer popup messages when filenames change\n  \n   - Various bugs related to installing dependencies have been resolved\n  \n   - Windows and OS X trust roots are exported in a way that valid/invalid purpose\n     information is now communicated to the OpenSSL-based Python ssl module\n  \n   - Further improvements have been made to handling of git/hg package upgrades\n  \n   - The Windows WinINet downloader has improved compatibility with Windows 10\n  \n\n  Version 3.1 Release Notes\n  \n  Package Control continues its focus on polish and fixing edge-case bugs. Some\n  of the changes in this version include:\n  \n   - quick panel for Install Package now stays open on Windows with recent\n     versions of ST3, even when focus is lost\n   - new \"downloader_precedence\" setting to allow users to use specific HTTP\n     backend due to network proxy or SSL issues\n   - added Install Local Dependency command for package developers to more\n     easily deal with dependencies during development\n   - improved handling of git/hg package upgrade errors\n   - better handling of locked .sublime-package files on Windows\n   - performance improvements for users with a large number of open windows\n  \n  For package developers, the list of available dependencies has been growing:\n  https://github.com/wbond/package_control_channel/blob/master/repository/dependencies.json\n  \n  Enjoy!\n  \n  ",
+					"settings":
+					{
+						"buffer_size": 3796,
+						"line_ending": "Windows",
+						"name": "Package Control Messages",
+						"scratch": true
 					}
 				}
 			],
@@ -361,36 +137,6 @@
 			},
 			"file_history":
 			[
-				"/C/Users/julia/Pong-Game/Simulador/PONG_GAME.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste2.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/teste.asm",
-				"/C/Users/julia/Pong-Game/PONG_GAME.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/PONG_GAME.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/snake.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pacman.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hangman.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/printCharmap.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/printaASCII.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Hello4.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Hello3.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Hello2.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Hello.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/fatorial.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Versao_05_2013/Exemplos/printaASCII.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/JogoDaForca.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/entendendo_o_código.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/forca_novo.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Versao_05_2013/Exemplos/fatorial.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/velha.zip",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha_bug.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/palito.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha_funcionando.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/JogoVelha.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/velha2.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/UAF.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/evilSquare.asm",
-				"/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/ppong.asm",
 				"/D/Simulador/Hello4.asm",
 				"/D/Teste Ambiente/Hello4.asm",
 				"/D/Teste Ambiente/leString.asm",
@@ -415,7 +161,7 @@
 			],
 			"find":
 			{
-				"height": 40.0
+				"height": 39.0
 			},
 			"find_in_files":
 			{
@@ -429,134 +175,21 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"iterador",
+					"delay",
+					"velocidade",
 					"get_char",
-					"clear_screen",
-					"piscaPressStart",
-					"start",
-					"menu",
-					"main",
-					"l01",
-					"print",
-					"print_routine",
-					"loopmenu",
-					"menu",
-					"Word",
-					"InsertWord",
-					"Word",
-					"TypeLetter",
-					"Letter",
-					"InsertLetter",
-					"Letter",
-					"TypeLetter",
-					"InsertWord",
-					"InsertLetter",
-					"InsertWord",
-					"InsertLetter",
-					"TryList",
-					"RepeatedLetter",
-					"            \n",
-					"RepeatedLetter",
-					"Compares",
-					"RepeatedLetter",
-					").",
-					"user",
-					"print",
-					"DrawLines",
-					"InsertWord",
-					"??",
-					"print",
-					"insert",
-					"type",
-					"muro",
-					"1280",
-					"compare",
-					"printcolorfullstring",
-					"colorfullstring",
-					"draw",
-					"printcolorfullstring",
-					"draw",
-					"printcolorfull",
-					"draw menu",
-					"draw",
-					"print",
-					"printmenucharacter",
-					"print menu",
-					"print",
-					"DrawMenu",
-					"cor",
-					"CaracterPacmanEsqAberto",
-					"CorAmarela",
-					"Muro",
-					"CaracterMuro",
-					"DrawMenu",
-					"start_game_again",
-					"TestEnd",
-					"m1",
-					"resetPacman",
-					"coramarela",
-					"CarregaMapa",
-					"2304",
-					"coramarela",
-					"muro",
-					"cor",
-					"&",
-					"CaracterPacmanEsqAberto",
-					"coramarela",
-					"CarregaMapa",
-					"CorAmarela",
-					"print",
-					"CorAmarela",
-					"InsertLetter",
-					"ClearLine",
-					"DrawLines",
-					"Compare",
-					"InsertLetter",
-					"Wordx",
-					"m8",
-					"m7",
-					"m8",
-					"m7",
-					"InsertLetter",
-					"DrawLines",
-					"InsertWord",
-					"DrawGallows",
-					"ClearScreen",
-					"Print",
-					"ClearScreen",
-					"DrawMenu",
-					"Compare",
-					"InsertLetter",
-					"TypeLetter",
-					"InsertLetter",
-					"ClearLine",
-					"rts",
-					"ClearScreen",
-					"DrawMenu",
-					"InsertWord",
-					"call",
-					"push fr",
-					"push r1",
-					"push r0",
-					"push fr",
-					"pop fr",
-					"call",
-					"rts",
-					"RTS",
-					"; Insert the content of r0 onto the stack. 'Saves' r0 onto the stack to keep it's value.",
-					"inc",
-					"loadi",
-					"storei",
-					"Adds",
-					"fr",
-					"Pops",
-					"found",
-					"achou",
-					"fr",
-					"storei",
-					"\\0",
-					"compares",
-					"call",
-					"write"
+					"print_start_screens",
+					"fundoGerado",
+					"delay",
+					"velocidadeDelay",
+					"delay",
+					"estado",
+					"delay",
+					"r*",
+					"r3",
+					"r2",
+					"r3"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -574,7 +207,7 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -583,15 +216,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 28104,
+								"buffer_size": 31670,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										5675,
-										5675
+										3624,
+										3624
 									]
 								],
 								"settings":
@@ -601,10 +234,213 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 1440.0,
+								"translation.y": 1779.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/pong.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 49514,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										75,
+										83
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/arrow.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 25846,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3099,
+										3104
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 2093.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/hamster.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 23349,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1844,
+										1844
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 3726.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 4,
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/Icenic.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 24035,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										23381,
+										23386
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 16031.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/naveSimoes.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 32630,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										15490,
+										15491
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 15101.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 6,
+							"type": "text"
+						},
+						{
+							"buffer": 6,
+							"file": "/C/Users/julia/OneDrive/Documentos/BSI/2º semestre/OrgArqComp/Simulador_Windows_Tudo_Pronto_Fácil/Simulador/orgame.asm",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 34309,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										32031,
+										32031
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Assembly ICMC/Assembly ICMC.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 25499.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 7,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3796,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3796,
+										3796
+									]
+								],
+								"settings":
+								{
+									"auto_indent": false,
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"word_wrap": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 7,
 							"type": "text"
 						}
 					]
@@ -643,13 +479,13 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 285.0
+				"height": 179.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"position": "0,2,3,-32000,-32000,-1,-1,652,609,29,1327",
+			"position": "0,2,3,-1,-1,-1,-1,646,31,107,687",
 			"project": "",
 			"replace":
 			{
@@ -688,12 +524,12 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 210.0,
+			"side_bar_width": 150.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			},
-			"window_id": 3,
+			"window_id": 1,
 			"workspace_name": ""
 		}
 	],

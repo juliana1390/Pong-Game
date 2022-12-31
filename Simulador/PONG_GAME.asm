@@ -25,12 +25,11 @@ jmp main
 
 ; MENU MESSAGES -------------------------------------------------
     message00: string "***********    MAIN MENU    ************"
-    message01: string "**          CHOOSE THE MODE:          **"
-    message02: string "##       SINGLEPLAYER - PRESS S       ##"
-    message03: string "    Use the keys to move the paddle:    "
-    message04: string "          'w' UP and 's' down           "
-    message05: string "**         CREDITS - PRESS C          **"
-    message06: string "**           EXIT - PRESS E           **"
+    message01: string "##         PRESS 's' TO PLAY          ##"
+    message02: string "    Use the keys to move the paddle:    "
+    message03: string "          'w' UP and 's' down           "
+    message04: string "**         CREDITS - PRESS 'c'        **"
+    message05: string "**           EXIT - PRESS 'e'         **"
 
 
 ; GAME OVER/VICTORY MESSAGES ------------------------------------
@@ -57,7 +56,6 @@ jmp main
     char: var #1            ; input from keyboard, size: 1 char
     player_pad: var #4      ; player paddle label, size: 4 char
     AI_pad: var #4          ; AI paddle label, size: 4 char
-    player_pad_speed: var #1
     
 ; ===============================================================
 ; MAIN ==========================================================
@@ -76,10 +74,6 @@ main:
         load r1, char
         cmp r0, r1
         jeq single_player         ; singlePlayer    
-
-        loadn r0, #'m'
-        cmp r0, r1
-        jeq multi_player          ; multiPlayer 
         
         loadn r0, #'c'
         cmp r0, r1
@@ -91,16 +85,21 @@ main:
 
     single_player:
         call clear_screen
-        call move_player_pad
-        ;jmp single_player
-
-    ;call delay
+        call print_game_scenes
    
 
 halt
 ; ===============================================================
 ; FUNCTIONS =====================================================
 ; ===============================================================   
+
+
+
+;THIS MOVEMENT FUNCTIONS NEED TO BE REDONE DUE TO THE CREATION OF GAME SCENES
+
+
+; DELAY ---------------------------------------------------------
+;delay:
 
 ; MOVE PLAYER PAD -----------------------------------------------
 move_player_pad:
@@ -124,16 +123,13 @@ move_player_pad:
     pop r0
     rts
 
-; DELAY ---------------------------------------------------------
-delay:
-
 ; MOVE UP -------------------------------------------------------
 move_up:
     push r0
     push r1
     push r2
 
-    load r0, player_pad     ;
+    load r0, player_pad     ; loads the address of pad
     loadn r1, #1            ; max position up
     loadn r2, #40           ; increments/decrements a whole line
 
@@ -157,7 +153,7 @@ move_down:
     push r1
     push r2
 
-    load r0, player_pad     ;
+    load r0, player_pad     ; loads the address of pad
     loadn r1, #1001         ; max position down
     loadn r2, #40           ; increments/decrements a whole line
 
@@ -182,7 +178,7 @@ draw_player_pad:
     push r2     ; keeps the char
     push r3     ; keeps color
 
-    load r0, player_pad ; loads the adress of paddle
+    load r0, player_pad ; loads the address of paddle
     loadn r3, #3328     ; loads the color of paddle
 
     loadn r1, #521      ; position of char 1 ------------- 1
@@ -225,7 +221,7 @@ draw_AI_pad:
     push r2     ; keeps the char
     push r3     ; keeps color
 
-    load r0, AI_pad     ; loads the adress of paddle
+    load r0, AI_pad     ; loads the address of paddle
     loadn r3, #3072     ; loads the color of paddle
 
     loadn r1, #558      ; position of char 1 ------------- 1
@@ -268,7 +264,7 @@ clear_player_pad:
     push r2
     push r3
     
-    load r0, player_pad ; loads the adress of paddle
+    load r0, player_pad ; loads the address of paddle
     loadn r3, #40       ; increments one whole line
 
     loadn r1, #521      ; position of char 1
@@ -302,7 +298,7 @@ clear_AI_pad:
     push r1
     push r2
 
-    load r0, AI_pad     ; loads the adress of paddle
+    load r0, AI_pad     ; loads the address of paddle
     loadn r3, #40       ; increments one whole line
 
     loadn r1, #558      ; position of char 1
@@ -330,29 +326,9 @@ clear_AI_pad:
     pop r0
     rts
 
-; MULTI PLAYER --------------------------------------------------
-multi_player:
-    push r0
-    push r1
-    push r3
-
-    call clear_screen
-    m01: string "Multi Player Game"
-    loadn r0, #600
-    loadn r1, #m01
-    loadn r3, #2560
-    call print_routine
-    call get_char
-
-    pop r3
-    pop r2
-    pop r1
-    rts
-
-
 ; CLEAR SCREEN --------------------------------------------------
 clear_screen:
-; clear the screen from the last position(1200) to the first one(0)
+; clear the screen from the last position (1200) to the first one(0)
   push r0
   push r1
 
@@ -375,12 +351,12 @@ get_char:
   push r0
   push r1     
 
-  loadn r1, #255
+  loadn r1, #255        ; ' ' blank space
   
   get_char_loop:          
     inchar r0           ; input from keyboard
     cmp r0, r1          ; compares input to ' ' (nothing typed)
-    jeq get_char_loop    ; if so, starts the loop again
+    jeq get_char_loop   ; if so, starts the loop again
 
     store char, r0       ; stores the input
 
@@ -389,8 +365,10 @@ get_char:
   rts
 
 ; ===================================================================
-; BLANK SCREEN ======================================================
+; START SCREENS =====================================================
 ; ===================================================================
+
+    ; BLANK SCREEN --------------------------------------------------    
     blankScrline0:  string "                                        "
     blankScrline1:  string "                                        "
     blankScrline2:  string "                                        "
@@ -421,12 +399,7 @@ get_char:
     blankScrline27: string "                                        "
     blankScrline28: string "                                        "
     blankScrline29: string "                                        "
-
-
-; ===================================================================
-; START SCREENS =====================================================
-; ===================================================================
-
+    
     ; START SCREEN 1 ------------------------------------------------
     startScrline0:  string "                                        "
     startScrline1:  string "                                        "
@@ -562,7 +535,138 @@ draw_game_over:
     over29: string "                                        "
     over30: string "                                        "
 
+; ===================================================================
+; GAME SCENE SCREENS ================================================
+; ===================================================================
 
+    ; EMPTY SCENE ---------------------------------------------------
+    sceneScrline0:  string "                                        "
+    sceneScrline1:  string "                                        "
+    sceneScrline2:  string "                                        "
+    sceneScrline3:  string "                                        "
+    sceneScrline4:  string "                                        "
+    sceneScrline5:  string "                                        "
+    sceneScrline6:  string "                                        "
+    sceneScrline7:  string "                                        "
+    sceneScrline8:  string "                                        "
+    sceneScrline9:  string "                                        "
+    sceneScrline10: string "                                        "
+    sceneScrline11: string "                                        "
+    sceneScrline12: string "                                        "
+    sceneScrline13: string "                                        "
+    sceneScrline14: string "                                        "
+    sceneScrline15: string "                                        "
+    sceneScrline16: string "                                        "
+    sceneScrline17: string "                                        "
+    sceneScrline18: string "                                        "
+    sceneScrline19: string "                                        "
+    sceneScrline20: string "                                        "
+    sceneScrline21: string "                                        "
+    sceneScrline22: string "                                        "
+    sceneScrline23: string "                                        "
+    sceneScrline24: string "                                        "
+    sceneScrline25: string "                                        "
+    sceneScrline26: string "                                        "
+    sceneScrline27: string "                                        "
+    sceneScrline28: string "                                        "
+    sceneScrline29: string "                                        "
+
+    ; GAME SCENE 1 ---------------------------------------------------
+    scene1Scrline0:  string "                                        "
+    scene1Scrline1:  string "                                        "
+    scene1Scrline2:  string "                                        "
+    scene1Scrline3:  string "                                        "
+    scene1Scrline4:  string "                                        "
+    scene1Scrline5:  string "                                        "
+    scene1Scrline6:  string "                                        "
+    scene1Scrline7:  string "                                        "
+    scene1Scrline8:  string "                                        "
+    scene1Scrline9:  string "                                        "
+    scene1Scrline10: string "                                        "
+    scene1Scrline11: string "                                        "
+    scene1Scrline12: string "                                        "
+    scene1Scrline13: string "                                        "
+    scene1Scrline14: string "                    @                   "
+    scene1Scrline15: string "                                        "
+    scene1Scrline16: string "                                        "
+    scene1Scrline17: string "                                        "
+    scene1Scrline18: string "                                        "
+    scene1Scrline19: string "                                        "
+    scene1Scrline20: string "                                        "
+    scene1Scrline21: string "                                        "
+    scene1Scrline22: string "                                        "
+    scene1Scrline23: string "                                        "
+    scene1Scrline24: string "                                        "
+    scene1Scrline25: string "                                        "
+    scene1Scrline26: string "                                        "
+    scene1Scrline27: string "                                        "
+    scene1Scrline28: string "                                        "
+    scene1Scrline29: string "                                        "
+
+    ; GAME SCENE 2 ---------------------------------------------------
+    scene2Scrline0:  string "                                        "
+    scene2Scrline1:  string "                                        "
+    scene2Scrline2:  string "                                        "
+    scene2Scrline3:  string "                                        "
+    scene2Scrline4:  string "                                        "
+    scene2Scrline5:  string "                                        "
+    scene2Scrline6:  string "                                        "
+    scene2Scrline7:  string "                                        "
+    scene2Scrline8:  string "                                        "
+    scene2Scrline9:  string "                                        "
+    scene2Scrline10: string "                                        "
+    scene2Scrline11: string "                                        "
+    scene2Scrline12: string "                                        "
+    scene2Scrline13: string " #                                      "
+    scene2Scrline14: string " #                                      "
+    scene2Scrline15: string " #                                      "
+    scene2Scrline16: string " #                                      "
+    scene2Scrline17: string "                                        "
+    scene2Scrline18: string "                                        "
+    scene2Scrline19: string "                                        "
+    scene2Scrline20: string "                                        "
+    scene2Scrline21: string "                                        "
+    scene2Scrline22: string "                                        "
+    scene2Scrline23: string "                                        "
+    scene2Scrline24: string "                                        "
+    scene2Scrline25: string "                                        "
+    scene2Scrline26: string "                                        "
+    scene2Scrline27: string "                                        "
+    scene2Scrline28: string "                                        "
+    scene2Scrline29: string "                                        "
+    
+    ; GAME SCENE 1 ---------------------------------------------------
+    scene3Scrline0:  string "                                        "
+    scene3Scrline1:  string "                                        "
+    scene3Scrline2:  string "                                        "
+    scene3Scrline3:  string "                                        "
+    scene3Scrline4:  string "                                        "
+    scene3Scrline5:  string "                                        "
+    scene3Scrline6:  string "                                        "
+    scene3Scrline7:  string "                                        "
+    scene3Scrline8:  string "                                        "
+    scene3Scrline9:  string "                                        "
+    scene3Scrline10: string "                                        "
+    scene3Scrline11: string "                                        "
+    scene3Scrline12: string "                                        "
+    scene3Scrline13: string "                                      # "
+    scene3Scrline14: string "                                      # "
+    scene3Scrline15: string "                                      # "
+    scene3Scrline16: string "                                      # "
+    scene3Scrline17: string "                                        "
+    scene3Scrline18: string "                                        "
+    scene3Scrline19: string "                                        "
+    scene3Scrline20: string "                                        "
+    scene3Scrline21: string "                                        "
+    scene3Scrline22: string "                                        "
+    scene3Scrline23: string "                                        "
+    scene3Scrline24: string "                                        "
+    scene3Scrline25: string "                                        "
+    scene3Scrline26: string "                                        "
+    scene3Scrline27: string "                                        "
+    scene3Scrline28: string "                                        "
+    scene3Scrline29: string "                                        "
+      
 ; ===============================================================
 ; PRINT ROUTINES ================================================
 ; ===============================================================
@@ -618,21 +722,15 @@ draw_game_over:
         loadn r3, #3328
         call print_routine
 
-        loadn r0, #720         ; message 4
+        loadn r0, #1000         ; message 4
         loadn r1, #message04
-        loadn r3, #3328
+        loadn r3, #2560
         call print_routine
 
-        loadn r0, #1000         ; message 5
+        loadn r0, #1080         ; message 5
         loadn r1, #message05
         loadn r3, #2560
         call print_routine
-
-        loadn r0, #1080         ; message 6
-        loadn r1, #message06
-        loadn r3, #2560
-        call print_routine
-
 
         pop r2
         pop r1
@@ -645,7 +743,6 @@ draw_game_over:
         push r1
         push r3
 
-        call clear_screen
         loadn r0, #120          ; message 1: position
         loadn r1, #credm00      ; message 1: content
         loadn r3, #2560         ; message 1: color
@@ -679,12 +776,34 @@ draw_game_over:
         loadn r3, #3328
         call print_routine
 
-        call get_char
-
         pop r0
         pop r1
         pop r3
         rts
+        
+    ; GAME SCREENS ----------------------------------------------------------------------    
+    print_game_scenes:
+        push r0
+        push r1
+        
+        loadn r1, #sceneScrline0   ; first char of first line address from start screen 3
+        call print_screen2      
+            
+        loadn r1, #scene1Scrline0    ; first char of first line address from start screen 1
+        loadn r2, #2816             ; yellow color
+        call print_screen2          ; prints full start screen 1
+          
+        loadn r1, #scene2Scrline0   ; first char of first line address from start screen 2
+        loadn r2, #3328             ; pink color
+        call print_screen2
+          
+        loadn r1, #scene3Scrline0   ; first char of first line address from start screen 3
+        loadn r2, #3072             ; blue color
+        call print_screen2
+        
+        pop r1
+        pop r0
+        rts   
 
     ; STD PRINT ROUTINE ----------------------------------------------------------------
     print_routine:             
